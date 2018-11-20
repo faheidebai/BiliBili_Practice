@@ -12,13 +12,12 @@ public class Moiveinfos implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
+	private Users users;
 	private Topics topics;
 	private String image;
 	private String titile;
 	private String moive;
-	private Integer authorId;
 	private Set commentses = new HashSet(0);
-	private Set userses = new HashSet(0);
 
 	// Constructors
 
@@ -27,23 +26,19 @@ public class Moiveinfos implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Moiveinfos(Topics topics, String titile, String moive, Integer authorId) {
+	public Moiveinfos(Users users, Topics topics) {
+		this.users = users;
 		this.topics = topics;
-		this.titile = titile;
-		this.moive = moive;
-		this.authorId = authorId;
 	}
 
 	/** full constructor */
-	public Moiveinfos(Topics topics, String image, String titile, String moive, Integer authorId, Set commentses,
-			Set userses) {
+	public Moiveinfos(Users users, Topics topics, String image, String titile, String moive, Set commentses) {
+		this.users = users;
 		this.topics = topics;
 		this.image = image;
 		this.titile = titile;
 		this.moive = moive;
-		this.authorId = authorId;
 		this.commentses = commentses;
-		this.userses = userses;
 	}
 
 	// Property accessors
@@ -54,6 +49,14 @@ public class Moiveinfos implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public Users getUsers() {
+		return this.users;
+	}
+
+	public void setUsers(Users users) {
+		this.users = users;
 	}
 
 	public Topics getTopics() {
@@ -88,28 +91,12 @@ public class Moiveinfos implements java.io.Serializable {
 		this.moive = moive;
 	}
 
-	public Integer getAuthorId() {
-		return this.authorId;
-	}
-
-	public void setAuthorId(Integer authorId) {
-		this.authorId = authorId;
-	}
-
 	public Set getCommentses() {
 		return this.commentses;
 	}
 
 	public void setCommentses(Set commentses) {
 		this.commentses = commentses;
-	}
-
-	public Set getUserses() {
-		return this.userses;
-	}
-
-	public void setUserses(Set userses) {
-		this.userses = userses;
 	}
 
 }

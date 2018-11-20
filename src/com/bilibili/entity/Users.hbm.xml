@@ -10,15 +10,18 @@
             <column name="Id" />
             <generator class="native" />
         </id>
-        <many-to-one name="moiveinfos" class="com.bilibili.entity.Moiveinfos" update="false" insert="false" fetch="select">
-            <column name="Id" not-null="true" unique="true" />
-        </many-to-one>
         <property name="user" type="java.lang.String">
             <column name="User" />
         </property>
         <property name="password" type="java.lang.String">
             <column name="Password" />
         </property>
+        <set name="moiveinfoses" inverse="true">
+            <key>
+                <column name="AuthorId" not-null="true" />
+            </key>
+            <one-to-many class="com.bilibili.entity.Moiveinfos" />
+        </set>
         <set name="commentses" inverse="true">
             <key>
                 <column name="AuthorId" not-null="true" />

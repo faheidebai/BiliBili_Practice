@@ -73,7 +73,7 @@
 	<!-- 定义切面 -->
 	<aop:config>
 	<aop:pointcut 
-	expression="execution(* com.news.biz.*.*(..))" id="bizMethods"/>
+	expression="execution(* com.bilibili.biz.*.*(..))" id="bizMethods"/>
 	<aop:advisor advice-ref="txAdvice" pointcut-ref="bizMethods"/>
 	</aop:config>
 	<tx:annotation-driven transaction-manager="transactionManager" />

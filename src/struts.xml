@@ -2,7 +2,7 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 	<package name="default" namespace="/" extends="struts-default">
-		<action name="MoiveinfoAction" class="MoiveInfoAction" method="index">
+		<action name="index" class="MoiveInfoAction" method="index">
 			<result name="index">/index.jsp</result>
 		</action>
 	</package>

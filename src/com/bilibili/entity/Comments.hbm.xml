@@ -6,13 +6,14 @@
 -->
 <hibernate-mapping>
     <class name="com.bilibili.entity.Comments" table="comments" catalog="bilibilidata">
-        <id name="id" type="java.lang.Integer">
-            <column name="id" />
-            <generator class="native" />
-        </id>
-        <many-to-one name="users" class="com.bilibili.entity.Users" fetch="select">
-            <column name="AuthorId" not-null="true" />
-        </many-to-one>
+        <composite-id name="id" class="com.bilibili.entity.CommentsId">
+            <key-property name="id" type="java.lang.Integer">
+                <column name="id" />
+            </key-property>
+            <key-many-to-one name="users" class="com.bilibili.entity.Users">
+                <column name="AuthorId" />
+            </key-many-to-one>
+        </composite-id>
         <many-to-one name="moiveinfos" class="com.bilibili.entity.Moiveinfos" fetch="select">
             <column name="MoiveId" not-null="true" />
         </many-to-one>

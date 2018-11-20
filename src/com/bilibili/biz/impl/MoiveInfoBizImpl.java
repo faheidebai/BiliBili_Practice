@@ -19,4 +19,10 @@ public class MoiveInfoBizImpl implements MoiveInfoBiz{
 		return moiveInfoDao.getAllTopic();
 	}
 
+	@Override
+	public List getMoiveInfoByTopicId(int id) {
+		// TODO Auto-generated method stub
+		return moiveInfoDao.getMoiveInfoByTopicId(id);
+	}
+
 }

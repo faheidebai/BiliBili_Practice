@@ -12,9 +12,9 @@ public class Users implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private Moiveinfos moiveinfos;
 	private String user;
 	private String password;
+	private Set moiveinfoses = new HashSet(0);
 	private Set commentses = new HashSet(0);
 
 	// Constructors
@@ -23,16 +23,11 @@ public class Users implements java.io.Serializable {
 	public Users() {
 	}
 
-	/** minimal constructor */
-	public Users(Moiveinfos moiveinfos) {
-		this.moiveinfos = moiveinfos;
-	}
-
 	/** full constructor */
-	public Users(Moiveinfos moiveinfos, String user, String password, Set commentses) {
-		this.moiveinfos = moiveinfos;
+	public Users(String user, String password, Set moiveinfoses, Set commentses) {
 		this.user = user;
 		this.password = password;
+		this.moiveinfoses = moiveinfoses;
 		this.commentses = commentses;
 	}
 
@@ -44,14 +39,6 @@ public class Users implements java.io.Serializable {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public Moiveinfos getMoiveinfos() {
-		return this.moiveinfos;
-	}
-
-	public void setMoiveinfos(Moiveinfos moiveinfos) {
-		this.moiveinfos = moiveinfos;
 	}
 
 	public String getUser() {
@@ -68,6 +55,14 @@ public class Users implements java.io.Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Set getMoiveinfoses() {
+		return this.moiveinfoses;
+	}
+
+	public void setMoiveinfoses(Set moiveinfoses) {
+		this.moiveinfoses = moiveinfoses;
 	}
 
 	public Set getCommentses() {

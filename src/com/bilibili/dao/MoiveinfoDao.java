@@ -6,5 +6,6 @@ public interface MoiveinfoDao {
 	
 	public List getAllTopic();
 	
+	public List getMoiveInfoByTopicId(int id);
 		
 }

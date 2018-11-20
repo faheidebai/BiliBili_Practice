@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
+ <s:action name="index" executeResult="false" namespace="/"></s:action>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,11 +24,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <a href="MoiveinfoAction"> test </a>
-  test
-  	<s:iterator id="topic" value="#request.topicList">
-    		${topic.topicName}
+
+  	<s:iterator id="topicList" value="#request.TopicList">
+  		
+  		<s:if test="#topicList.id%2==1">
+  			</br>
+  		</s:if>
+  		${topicList.topicName}
+		<s:iterator value="#request.MoiveInfoList">
+			
+			<s:iterator id="moiveInfoList" value="top">
+  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+  					${moiveInfoList.titile}
+  					${moiveInfoList.image}
+  				</s:if>
+  			
+  				
+  			</s:iterator>
+    	</s:iterator>
+    	
     </s:iterator>
+
+
   
+
+
+   
   </body>
 </html>
