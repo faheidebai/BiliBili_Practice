@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.bilibili.biz.MoiveInfoBiz;
 import com.bilibili.dao.MoiveinfoDao;
+import com.bilibili.entity.Users;
 
 public class MoiveInfoBizImpl implements MoiveInfoBiz{
 	
@@ -23,6 +24,18 @@ public class MoiveInfoBizImpl implements MoiveInfoBiz{
 	public List getMoiveInfoByTopicId(int id) {
 		// TODO Auto-generated method stub
 		return moiveInfoDao.getMoiveInfoByTopicId(id);
+	}
+
+	@Override
+	public Users getAuthorById(int id) {
+		// TODO Auto-generated method stub
+		return moiveInfoDao.getAuthorById(id);
+	}
+
+	@Override
+	public List getCommentById(int id) {
+		// TODO Auto-generated method stub
+		return moiveInfoDao.getCommentById(id);
 	}
 
 }

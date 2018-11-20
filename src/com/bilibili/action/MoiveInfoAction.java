@@ -17,9 +17,11 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 	
 	MoiveInfoBiz moiveInfoBiz;
 
+
 	public void setMoiveInfoBiz(MoiveInfoBiz moiveInfoBiz) {
 		this.moiveInfoBiz = moiveInfoBiz;
 	}
+	
 	Map<String, Object> session;
 	Map<String, Object> request;
 	
@@ -44,15 +46,33 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 			Topics topic = (Topics)topicList.get(i);
 			moiveInfoList.add(moiveInfoBiz.getMoiveInfoByTopicId(topic.getId()));
 		}
-		
-		//request.put("test", MoiveInfoList);
+
 		request.put("TopicList", topicList);
 		request.put("MoiveInfoList", moiveInfoList);
-		
-
 		// TODO Auto-generated method stub
 		return "index";
 	}
+	
+	
+	
+	Moiveinfos Moiveinfos;
+	
+	public void setMoiveinfos(Moiveinfos moiveinfos) {
+		Moiveinfos = moiveinfos;
+	}
+
+	public String videoIndex() throws Exception {
+		
+		List comments = moiveInfoBiz.getCommentById(1);
+		Users author = moiveInfoBiz.getAuthorById(1);
+		
+		//request.put("MoiveInfo", this.Moiveinfos);
+		request.put("Author", author);
+		request.put("Comments", comments);
+		
+		return "VideoIndex";
+	}
+
 
 
 

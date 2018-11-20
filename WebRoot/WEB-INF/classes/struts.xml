@@ -5,6 +5,10 @@
 		<action name="index" class="MoiveInfoAction" method="index">
 			<result name="index">/index.jsp</result>
 		</action>
+		<action name="video" class="MoiveInfoAction" method="videoIndex">
+			<result name="VideoIndex">/video.jsp</result>
+		</action>
+	
 	</package>
 
 </struts>    

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2018-11-20 15:56:08
+Date: 2018-11-20 21:41:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,6 +59,7 @@ CREATE TABLE `moiveinfos` (
 -- Records of moiveinfos
 -- ----------------------------
 INSERT INTO `moiveinfos` VALUES ('1', '1', 'image', 'titile', 'moive', '1');
+INSERT INTO `moiveinfos` VALUES ('1', '2', 'image', 'titile', 'moive', '1');
 
 -- ----------------------------
 -- Table structure for `topics`

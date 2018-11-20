@@ -44,18 +44,14 @@
 				<value>com/bilibili/entity/Topics.hbm.xml</value></list>
 		</property></bean>
         <!-- newsinfoDao -->
-        <bean id="moiveInfoDao"
-		class="com.bilibili.dao.impl.MoivenInfoDaoImpl">
-		<property name="sessionFactory" ref="sessionFactory" />
+        <bean id="moiveInfoDao" class="com.bilibili.dao.impl.MoivenInfoDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory" />
 		</bean>
-		<bean id="moiveInfoBiz"
-			class="com.bilibili.biz.impl.MoiveInfoBizImpl">
+		<bean id="moiveInfoBiz" class="com.bilibili.biz.impl.MoiveInfoBizImpl">
 			<property name="moiveInfoDao" ref="moiveInfoDao" />
 		</bean>
-		<bean id="MoiveInfoAction"
-			class="com.bilibili.action.MoiveInfoAction">
+		<bean id="MoiveInfoAction" class="com.bilibili.action.MoiveInfoAction">
 			<property name="moiveInfoBiz" ref="moiveInfoBiz" />
-			
 		</bean>
 		
 	<!-- 事务管理器 -->	
