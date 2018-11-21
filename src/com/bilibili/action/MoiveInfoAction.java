@@ -55,18 +55,25 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 	
 	
 	
-	Moiveinfos Moiveinfos;
+	private Moiveinfos movienInfos;
 	
-	public void setMoiveinfos(Moiveinfos moiveinfos) {
-		Moiveinfos = moiveinfos;
+
+	public void setMovienInfos(Moiveinfos movienInfos) {
+		this.movienInfos = movienInfos;
 	}
+
 
 	public String videoIndex() throws Exception {
 		
-		List comments = moiveInfoBiz.getCommentById(1);
-		Users author = moiveInfoBiz.getAuthorById(1);
+		Users author = this.moiveInfoBiz.getAuthorById(this.movienInfos.getId());
 		
-		//request.put("MoiveInfo", this.Moiveinfos);
+		Moiveinfos moiveInfo = this.moiveInfoBiz.getMoiveInfoById(this.movienInfos.getId());
+		
+		List comments = this.moiveInfoBiz.getCommentById(this.movienInfos.getId());
+		
+	
+		
+		request.put("MoiveInfo", moiveInfo);
 		request.put("Author", author);
 		request.put("Comments", comments);
 		

@@ -25,6 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 
+
   	<s:iterator id="topicList" value="#request.TopicList">
   		
   		<s:if test="#topicList.id%2==1">
@@ -35,8 +36,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<s:iterator id="moiveInfoList" value="top">
   				<s:if test="#topicList.id==#moiveInfoList.topics.id">
-  					<a href="video">${moiveInfoList.titile}</a>
-  					<a href="video?Moiveinfos=${moiveInfoList}">${moiveInfoList.image}</a>
+  					<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+  					<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>
   				</s:if>
   			
   				

@@ -43,21 +43,34 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 		return c.list();
 	}
 
-
+	
 	@Override
 	public Users getAuthorById(int id) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		Users author=(Users)session.get(Users.class, id);
+
 		return author;
 	}
+
+	
+	
+	@Override
+	public Moiveinfos getMoiveInfoById(int id) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Moiveinfos moiveinfos=(Moiveinfos)session.get(Moiveinfos.class, id);
+
+		return moiveinfos;
+	}
+
 
 
 	@Override
 	public List getCommentById(int id) {
 		// TODO Auto-generated method stub
 		
-		Session session=sessionFactory.getCurrentSession();
+		Session session = sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Comment.class);	
 		c.add(Restrictions.eq("moiveinfos.id",id));
 		c.setMaxResults(10);
