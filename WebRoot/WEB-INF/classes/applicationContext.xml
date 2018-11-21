@@ -54,6 +54,16 @@
 			<property name="moiveInfoBiz" ref="moiveInfoBiz" />
 		</bean>
 		
+		 <bean id="UserDao" class="com.bilibili.dao.impl.UserDaoImpl">
+			<property name="sessionFactory" ref="sessionFactory" />
+		</bean>
+		<bean id="UserBiz" class="com.bilibili.biz.impl.UserBizImpl">
+			<property name="userDao" ref="UserDao" />
+		</bean>
+		<bean id="UserAction" class="com.bilibili.action.UserAction">
+			<property name="userBiz" ref="UserBiz" />
+		</bean>
+		
 	<!-- 事务管理器 -->	
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">

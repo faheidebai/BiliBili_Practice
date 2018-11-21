@@ -8,7 +8,10 @@
 		<action name="video" class="MoiveInfoAction" method="videoIndex">
 			<result name="VideoIndex">/video.jsp</result>
 		</action>
-	
+		<action name="Login" class="UserAction" method="login">
+			<result name="Index" type="redirectAction">index</result>
+			<result name="Login">/Login.jsp</result>
+		</action>
 	</package>
 
 </struts>    

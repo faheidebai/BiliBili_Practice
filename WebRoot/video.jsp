@@ -24,7 +24,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 		
-		${MoiveInfo.id}
   		${MoiveInfo.moive}
   		${MoiveInfo.titile}
   		${Author.user}

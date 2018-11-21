@@ -19,15 +19,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<script language="javascript">
+		function check(){
+			var loginName = document.getElementById("loginName");
+			var loginPwd = document.getElementById("loginPwd");
+			if(loginName.value == ""){
+				alert("用户名不能为空！请重新填入！");
+				loginName.focus();	
+				return false;
+			}else if(loginPwd.value == ""){
+				alert("密码不能为空！请重新填入！");
+				loginPwd.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function focusOnLogin(){
+			var loginPwd = document.getElementById("loginPwd");
+			if( loginPwd != null )
+				loginPwd.focus();	
+		}
+	</script>
   </head>
   
   <body>
-    	<form action="login" method="post" onsubmit="return check()">
+    	<form action="Login" method="post" onsubmit="return check()">
 		    <label>用户名</label>
-			<input type="text" id="loginName"  name="admin.loginname" value="" class="login_input" />
+			<input type="text" id="loginName"  name="user.user" value="" class="login_input" />
 			<label> 密&#160;&#160;码 </label>
-			<input type="password" id="loginPwd" name="admin.loginpwd" value="" class="login_input" />
+			<input type="password" id="loginPwd" name="user.pasword" value="" class="login_input" />
 			<input type="submit" class="login_sub" value="登录" />
 			<label id="error"> </label>			
 		</form>
