@@ -64,6 +64,7 @@
 			<property name="userBiz" ref="UserBiz" />
 		</bean>
 		
+		
 	<!-- 事务管理器 -->	
 	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">

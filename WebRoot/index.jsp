@@ -31,6 +31,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		test
 	</s:if>
 
+	<a href="logout.jsp">退出</a>
   	<s:iterator id="topicList" value="#request.TopicList">
   		
   		<s:if test="#topicList.id%2==1">

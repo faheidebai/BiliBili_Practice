@@ -9,6 +9,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 
 import com.bilibili.dao.UserDao;
+import com.bilibili.entity.Comments;
 import com.bilibili.entity.Users;
 
 public class UserDaoImpl implements UserDao {
@@ -32,6 +33,14 @@ public class UserDaoImpl implements UserDao {
 		return list;
 
 
+	}
+	
+	public void addComment(Comments comment) {
+		// TODO Auto-generated method stub
+		
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(comment);
+		
 	}
 
 }

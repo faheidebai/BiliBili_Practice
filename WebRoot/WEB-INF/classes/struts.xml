@@ -13,6 +13,11 @@
 			<result name="Index" type="redirectAction">index</result>
 			<result name="Login">/Login.jsp</result>
 		</action>
+		<action name="addComment" class="UserAction" method="addComment">
+			<result name="AddComment" type="redirectAction">index</result>
+		</action>
+		
+		
 	</package>
 
 </struts>    

@@ -66,20 +66,22 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 
 	public String videoIndex() throws Exception {
 		
+		//查询视频 和视频作者
 		Users author = this.moiveInfoBiz.getAuthorById(this.movienInfos.getId());
-		
 		Moiveinfos moiveInfo = this.moiveInfoBiz.getMoiveInfoById(this.movienInfos.getId());
-		
+		moiveInfo.setUsers(author);
+		//查询评论 和评论作者
 		List comments = this.moiveInfoBiz.getCommentById(this.movienInfos.getId());
+		for (int i=0; i<comments.size(); i++){
+			Comments comment = (Comments)comments.get(i);
+			Users authorComments = this.moiveInfoBiz.getAuthorById(comment.getUsers().getId());
+			comment.setUsers(authorComments);
+			
+		}
 		
-	
-
+		
 		request.put("MoiveInfo", moiveInfo);
-		request.put("Author", author);
 		request.put("CommentsList", comments);
-		request.put("Comments", comments.get(0));
-		request.put("n", comments.size());
-		
 		return "VideoIndex";
 	}
 
