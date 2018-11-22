@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 
 import com.bilibili.dao.MoiveinfoDao;
+import com.bilibili.entity.Comments;
 import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Topics;
 import com.bilibili.entity.Users;
@@ -70,11 +71,12 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 	public List getCommentById(int id) {
 		// TODO Auto-generated method stub
 		
-		Session session = sessionFactory.getCurrentSession();
-		Criteria c = session.createCriteria(Comment.class);	
-		c.add(Restrictions.eq("moiveinfos.id",id));
-		c.setMaxResults(10);
+		Session session=sessionFactory.getCurrentSession();
+		Criteria c = session.createCriteria(Comments.class);	
+		c.add(Restrictions.eq("moiveId",id));
+		c.setMaxResults(5);
 		return c.list();
+
 	}
 
 }

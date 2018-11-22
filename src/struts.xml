@@ -6,6 +6,7 @@
 			<result name="index">/index.jsp</result>
 		</action>
 		<action name="video" class="MoiveInfoAction" method="videoIndex">
+			<result name="Index" type="redirectAction">index</result>
 			<result name="VideoIndex">/video.jsp</result>
 		</action>
 		<action name="Login" class="UserAction" method="login">

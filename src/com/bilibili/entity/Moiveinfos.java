@@ -1,8 +1,5 @@
 package com.bilibili.entity;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Moiveinfos entity. @author MyEclipse Persistence Tools
  */
@@ -17,7 +14,6 @@ public class Moiveinfos implements java.io.Serializable {
 	private String image;
 	private String titile;
 	private String moive;
-	private Set commentses = new HashSet(0);
 
 	// Constructors
 
@@ -32,13 +28,12 @@ public class Moiveinfos implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Moiveinfos(Users users, Topics topics, String image, String titile, String moive, Set commentses) {
+	public Moiveinfos(Users users, Topics topics, String image, String titile, String moive) {
 		this.users = users;
 		this.topics = topics;
 		this.image = image;
 		this.titile = titile;
 		this.moive = moive;
-		this.commentses = commentses;
 	}
 
 	// Property accessors
@@ -89,14 +84,6 @@ public class Moiveinfos implements java.io.Serializable {
 
 	public void setMoive(String moive) {
 		this.moive = moive;
-	}
-
-	public Set getCommentses() {
-		return this.commentses;
-	}
-
-	public void setCommentses(Set commentses) {
-		this.commentses = commentses;
 	}
 
 }

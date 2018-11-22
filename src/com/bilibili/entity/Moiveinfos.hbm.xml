@@ -25,11 +25,5 @@
         <property name="moive" type="java.lang.String">
             <column name="Moive" length="1024" />
         </property>
-        <set name="commentses" inverse="true">
-            <key>
-                <column name="MoiveId" not-null="true" />
-            </key>
-            <one-to-many class="com.bilibili.entity.Comments" />
-        </set>
     </class>
 </hibernate-mapping>

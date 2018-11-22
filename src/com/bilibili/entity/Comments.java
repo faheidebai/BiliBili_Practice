@@ -8,8 +8,9 @@ public class Comments implements java.io.Serializable {
 
 	// Fields
 
-	private CommentsId id;
-	private Moiveinfos moiveinfos;
+	private Integer id;
+	private Users users;
+	private Integer moiveId;
 	private String content;
 
 	// Constructors
@@ -19,28 +20,36 @@ public class Comments implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Comments(CommentsId id, Moiveinfos moiveinfos, String content) {
-		this.id = id;
-		this.moiveinfos = moiveinfos;
+	public Comments(Users users, Integer moiveId, String content) {
+		this.users = users;
+		this.moiveId = moiveId;
 		this.content = content;
 	}
 
 	// Property accessors
 
-	public CommentsId getId() {
+	public Integer getId() {
 		return this.id;
 	}
 
-	public void setId(CommentsId id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
-	public Moiveinfos getMoiveinfos() {
-		return this.moiveinfos;
+	public Users getUsers() {
+		return this.users;
 	}
 
-	public void setMoiveinfos(Moiveinfos moiveinfos) {
-		this.moiveinfos = moiveinfos;
+	public void setUsers(Users users) {
+		this.users = users;
+	}
+
+	public Integer getMoiveId() {
+		return this.moiveId;
+	}
+
+	public void setMoiveId(Integer moiveId) {
+		this.moiveId = moiveId;
 	}
 
 	public String getContent() {

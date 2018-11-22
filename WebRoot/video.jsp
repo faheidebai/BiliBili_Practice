@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -26,9 +27,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
   		${MoiveInfo.moive}
   		${MoiveInfo.titile}
-  		${Author.user}
-  		<s:iterator id="comment" value="#request.Comments">
-  			${comment.content}
+  		${Author.user} 
+ 
+		<s:iterator id="comments" value="#request.CommentsList">
+			</br>${comments.id}
+			${comments.content}
+			
   		</s:iterator>
   			
   		

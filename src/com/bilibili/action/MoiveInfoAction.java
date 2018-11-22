@@ -8,6 +8,7 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.bilibili.biz.MoiveInfoBiz;
+import com.bilibili.entity.Comments;
 import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Topics;
 import com.bilibili.entity.Users;
@@ -72,10 +73,12 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		List comments = this.moiveInfoBiz.getCommentById(this.movienInfos.getId());
 		
 	
-		
+
 		request.put("MoiveInfo", moiveInfo);
 		request.put("Author", author);
-		request.put("Comments", comments);
+		request.put("CommentsList", comments);
+		request.put("Comments", comments.get(0));
+		request.put("n", comments.size());
 		
 		return "VideoIndex";
 	}
