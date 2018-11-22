@@ -40,7 +40,7 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 		if (this.userBiz.Login(user)){
 			return "Index";
 		}
-		
+	
 		return "Login";
 		
 		
