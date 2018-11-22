@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -44,11 +45,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  		<s:if test="#session.User != null">
+  		   <% response.sendRedirect("index"); %>
+  		</s:if>
     	<form action="Login" method="post" onsubmit="return check()">
 		    <label>用户名</label>
 			<input type="text" id="loginName"  name="user.user" value="" class="login_input" />
 			<label> 密&#160;&#160;码 </label>
-			<input type="password" id="loginPwd" name="user.pasword" value="" class="login_input" />
+			<input type="password" id="loginPwd" name="user.password" value="" class="login_input" />
 			<input type="submit" class="login_sub" value="登录" />
 			<label id="error"> </label>			
 		</form>

@@ -20,35 +20,18 @@ public class UserDaoImpl implements UserDao {
 		this.sessionFactory = sessionFactory;
 	}
 	@Override
-	public boolean Login(Users user) {
+	public List Login(Users user) {
 		// TODO Auto-generated method stub
 		List list = null;
 		Session session = sessionFactory.getCurrentSession();
 		Criteria c=session.createCriteria(Users.class);
 		Example example=Example.create(user);
-		//c.add(example);
-		//list=c.list();
-		if (example !=null ){
-			return true;
-		}
-		return false ;
-		/*
-		String hql="from Users where user=? and password=?";
-		Query query = session.createQuery(hql);
-		query.setString(0, user.getUser());
-		query.setString(1, user.getPassword());
-		list = query.list();
-		return true;
-		/*if (list == null){
-			return false;
-		}else{
-			return true;
-		}*/
-		
-//		
+		c.add(example);
+		list=c.list();
+	
+		return list;
 
-		//return list;
-		
+
 	}
 
 }

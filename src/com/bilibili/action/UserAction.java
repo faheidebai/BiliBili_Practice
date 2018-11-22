@@ -1,5 +1,6 @@
 package com.bilibili.action;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.RequestAware;
@@ -36,13 +37,12 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	
 	public String login() throws Exception {
 		// TODO Auto-generated method stub
-		
-		if (this.userBiz.Login(user)){
+		List loginList = this.userBiz.Login(user);
+		if (loginList != null && loginList.size() > 0){
+			session.put("User", loginList.get(0));
 			return "Index";
 		}
-	
 		return "Login";
-		
 		
 	}
 	

@@ -24,7 +24,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-
+	<s:if test="#session.User != null">
+		欢迎
+	</s:if>
+	<s:if test="#session.User == null">
+		test
+	</s:if>
 
   	<s:iterator id="topicList" value="#request.TopicList">
   		
