@@ -62,5 +62,21 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 		
 	}
 	
+	
+	private Comments deleteComment;
+	
+	public void setDeleteComment(Comments deleteComment) {
+		this.deleteComment = deleteComment;
+	}
+	public String deleteComment() throws Exception {
+		// TODO Auto-generated method stub
+
+		this.userBiz.deleteComment(deleteComment);
+		return "DeleteComment";
+		
+	}
+	
+	
+	
 
 }

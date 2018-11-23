@@ -42,5 +42,11 @@ public class UserDaoImpl implements UserDao {
 		session.saveOrUpdate(comment);
 		
 	}
+	@Override
+	public void deleteComment(Comments comment) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		session.delete(comment);
+	}
 
 }

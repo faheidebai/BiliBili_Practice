@@ -10,4 +10,6 @@ public interface UserBiz {
 	public List Login (Users user);
 	
 	public void addComment(Comments comment);
+	
+	public void deleteComment(Comments comment);
 }

@@ -57,14 +57,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<!--  ${Author.user} -->
  
 
-  			
-  			
-  			
-  			
-  		
-  		
-  		
-  		
   	
 			<!-- 评论提交 -->
 		   <s:if test="#session.User"></s:if>
@@ -87,7 +79,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				${comments.id}
 				${comments.users.user}
 				${comments.content}
-			
+				
+				<s:if test="#session.User">
+					<s:if test="#session.User.id==#comments.users.id">
+							<a href="deleteComment?deleteComment.id=${requestScope.comments.id }">删除</a>
+					</s:if>
+				
+				</s:if>
   			</s:iterator>
   </body>
 </html>

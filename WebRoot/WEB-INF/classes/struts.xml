@@ -17,6 +17,9 @@
 			<result name="AddComment" type="redirectAction">index</result>
 		</action>
 		
+		<action name="deleteComment" class="UserAction" method="deleteComment">
+			<result name="DeleteComment" type="redirectAction">index</result>
+		</action>
 		
 	</package>
 

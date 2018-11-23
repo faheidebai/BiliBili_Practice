@@ -27,4 +27,10 @@ public class UserBizImpl implements UserBiz{
 		this.userDao.addComment(comment);
 	}
 
+	@Override
+	public void deleteComment(Comments comment) {
+		// TODO Auto-generated method stub
+		this.userDao.deleteComment(comment);
+	}
+
 }
