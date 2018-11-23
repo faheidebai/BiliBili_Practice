@@ -70,8 +70,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		   <s:if test="#session.User"></s:if>
 		   <s:else>null</s:else>
 		    <s:form action="addComment" method="post" onsubmit="return check()">
-			<s:hidden name="addComment.users.id" value="#session.User.id" />
-			<s:hidden name="addComment.moiveId" value="#MoiveInfo.id" /> 
+			<s:hidden name="addComment.users.id" value="%{#session.User.id}" />
+			<s:hidden name="addComment.moiveId" value="%{#request.MoiveInfo.id}" /> 
 		       <s:textarea label="内容" name="addComment.content" cols="70" rows="10" id="content">
 		        </s:textarea>
 		     <p>

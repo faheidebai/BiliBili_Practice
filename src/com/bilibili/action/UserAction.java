@@ -32,6 +32,9 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	public void setUser(Users user) {
 		this.user = user;
 	}
+	public Users getUser() {
+		return user;
+	}
 	public String login() throws Exception {
 		// TODO Auto-generated method stub
 		List loginList = this.userBiz.Login(user);
@@ -44,11 +47,16 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	
 	
 	private Comments addComment;
+	
+	public Comments getAddComment() {
+		return addComment;
+	}
 	public void setAddComment(Comments addComment) {
 		this.addComment = addComment;
 	}
 	public String addComment() throws Exception {
 		// TODO Auto-generated method stub
+
 		this.userBiz.addComment(addComment);
 		return "AddComment";
 		
