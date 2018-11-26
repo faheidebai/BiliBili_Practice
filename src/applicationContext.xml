@@ -63,6 +63,7 @@
 		</bean>
 		<bean id="UserAction" class="com.bilibili.action.UserAction">
 			<property name="userBiz" ref="UserBiz" />
+			<property name="moiveInfoBiz" ref="moiveInfoBiz" />
 		</bean>
 		
 		

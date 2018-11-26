@@ -15,6 +15,8 @@ public interface UserBiz {
 	public void deleteComment(Comments comment);
 	
 	public Userinfo getUserInfoById(int id);
+	
+	public List getMoiveInfoByUserId(int id);
 }
 
 

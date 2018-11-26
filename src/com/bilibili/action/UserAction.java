@@ -6,8 +6,10 @@ import java.util.Map;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.bilibili.biz.MoiveInfoBiz;
 import com.bilibili.biz.UserBiz;
 import com.bilibili.entity.Comments;
+import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 import com.opensymphony.xwork2.ActionSupport;
@@ -17,15 +19,18 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	private Map<String, Object> session;
 	private Map<String, Object> request;
 	private UserBiz userBiz;
+	private MoiveInfoBiz moiveInfoBiz;
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
 	public void setRequest(Map<String, Object> request) {
 		this.request = request;
 	}
-
 	public void setUserBiz(UserBiz userBiz) {
 		this.userBiz = userBiz;
+	}
+	public void setMoiveInfoBiz(MoiveInfoBiz moiveInfoBiz) {
+		this.moiveInfoBiz = moiveInfoBiz;
 	}
 	
 	
@@ -60,24 +65,31 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	}
 	public String addComment() throws Exception {
 		// TODO Auto-generated method stub
-
 		this.userBiz.addComment(addComment);
 		return "AddComment";
-		
 	}
 	
 	
 	private Comments deleteComment;
-	
 	public void setDeleteComment(Comments deleteComment) {
 		this.deleteComment = deleteComment;
 	}
 	public String deleteComment() throws Exception {
 		// TODO Auto-generated method stub
-
 		this.userBiz.deleteComment(deleteComment);
 		return "DeleteComment";
-		
+	}
+	
+	
+	private Users getUserId;
+	public void setGetUserId(Users getUserId) {
+		this.getUserId = getUserId;
+	}
+	public String getMoiveByUser() throws Exception {
+		// TODO Auto-generated method stub
+		List moiveList = userBiz.getMoiveInfoByUserId(getUserId.getId());
+		request.put("MoiveList", moiveList);
+		return "Moive";
 	}
 	
 	

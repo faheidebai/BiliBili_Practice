@@ -33,6 +33,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<s:else>
   	   <%  response.sendRedirect("Login.jsp"); %>
   	</s:else>
+  	
   
+  	<a href="getMoiveByUser?getUserId.id=${session.LoginUserInfo.users.id}">查看发布视频</a>
+  	
+  	
+	
+  	<s:iterator id="moiveInfoList" value="#request.MoiveList">	
+		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>		
+  	</s:iterator>		
+  			
+ 	<s:if test="#request.moiveList != null">
+ 	 test
+ 	</s:if>
+   	
+  		
   </body>
+  
 </html>

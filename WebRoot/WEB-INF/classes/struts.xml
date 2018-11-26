@@ -21,6 +21,10 @@
 			<result name="DeleteComment" type="redirectAction">video</result>
 			<!--  <result name="DeleteComment" type="redirectAction">index</result>-->
 		</action>
+		<action name="getMoiveByUser" class="UserAction" method="getMoiveByUser">
+			<result name="Moive">/UserIndex.jsp</result>
+			<!--  <result name="DeleteComment" type="redirectAction">index</result>-->
+		</action>
 		
 	</package>
 

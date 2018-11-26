@@ -40,4 +40,10 @@ public class UserBizImpl implements UserBiz{
 		return this.userDao.getUserInfoById(id);
 	}
 
+	@Override
+	public List getMoiveInfoByUserId(int id) {
+		// TODO Auto-generated method stub
+		return this.userDao.getMoiveInfoByUserId(id);
+	}
+
 }

@@ -76,10 +76,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 			Comments comment = (Comments)comments.get(i);
 			Users authorComments = this.moiveInfoBiz.getAuthorById(comment.getUsers().getId());
 			comment.setUsers(authorComments);
-			
 		}
-		
-		
 		request.put("MoiveInfo", moiveInfo);
 		request.put("CommentsList", comments);
 		

@@ -16,4 +16,8 @@ public interface UserDao {
 	
 	public Userinfo getUserInfoById(int id);
 	
+	public List getMoiveInfoByUserId(int id);
+	
+	
+	
 }
