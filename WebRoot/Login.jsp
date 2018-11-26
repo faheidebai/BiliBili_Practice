@@ -45,6 +45,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+ 
+  
+ 	 <a href="index.jsp">主页</a>
   		<s:if test="#session.User != null">
   		   <% response.sendRedirect("index"); %>
   		</s:if>

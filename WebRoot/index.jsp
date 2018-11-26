@@ -25,6 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+    <a href="index.jsp">主页</a>
+  
 	<s:if test="#session.LoginUserInfo != null">
 		<a href="UserIndex.jsp">${session.LoginUserInfo.userName}</a>
 		<a href="logout.jsp">退出</a>

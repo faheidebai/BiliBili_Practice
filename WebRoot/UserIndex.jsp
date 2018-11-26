@@ -24,8 +24,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  	<a href="index.jsp">主页</a>
   	<s:if test="#session.LoginUserInfo != null">
-  		
   		${session.LoginUserInfo.userName}
   		${session.LoginUserInfo.avatar}
   		${session.LoginUserInfo.personality}
