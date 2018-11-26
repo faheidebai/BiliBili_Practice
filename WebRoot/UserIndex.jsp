@@ -1,4 +1,5 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,11 +24,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<s:if test="#session.User != null">
+  	<s:if test="#session.LoginUserInfo != null">
   		
-  		${session.UserInfo.userName}
-  		${session.UserInfo.avatar}
-  		${session.UserInfo.personality}
+  		${session.LoginUserInfo.userName}
+  		${session.LoginUserInfo.avatar}
+  		${session.LoginUserInfo.personality}
   	</s:if>
   	<s:else>
   	   <%  response.sendRedirect("Login.jsp"); %>

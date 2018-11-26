@@ -47,11 +47,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
 
 		
-		<s:if test="#session.User != null">
-			欢迎
+		<s:if test="#session.LoginUserInfo != null">
+			<a href="UserIndex.jsp">${session.LoginUserInfo.userName}</a>
 			<a href="logout.jsp">退出</a>
 		</s:if>
-		<s:if test="#session.User == null">
+		<s:if test="#session.LoginUserInfo == null">
 			<a href="Login.jsp">登陆</a>
 		</s:if>
 		
