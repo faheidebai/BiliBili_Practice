@@ -14,8 +14,7 @@ public class Users implements java.io.Serializable {
 	private Integer id;
 	private String user;
 	private String password;
-	private Set moiveinfoses = new HashSet(0);
-	private Set commentses = new HashSet(0);
+	private Set userinfos = new HashSet(0);
 
 	// Constructors
 
@@ -24,11 +23,10 @@ public class Users implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Users(String user, String password, Set moiveinfoses, Set commentses) {
+	public Users(String user, String password, Set userinfos) {
 		this.user = user;
 		this.password = password;
-		this.moiveinfoses = moiveinfoses;
-		this.commentses = commentses;
+		this.userinfos = userinfos;
 	}
 
 	// Property accessors
@@ -57,20 +55,12 @@ public class Users implements java.io.Serializable {
 		this.password = password;
 	}
 
-	public Set getMoiveinfoses() {
-		return this.moiveinfoses;
+	public Set getUserinfos() {
+		return this.userinfos;
 	}
 
-	public void setMoiveinfoses(Set moiveinfoses) {
-		this.moiveinfoses = moiveinfoses;
-	}
-
-	public Set getCommentses() {
-		return this.commentses;
-	}
-
-	public void setCommentses(Set commentses) {
-		this.commentses = commentses;
+	public void setUserinfos(Set userinfos) {
+		this.userinfos = userinfos;
 	}
 
 }

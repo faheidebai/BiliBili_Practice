@@ -14,11 +14,12 @@
 			<result name="Login">/Login.jsp</result>
 		</action>
 		<action name="addComment" class="UserAction" method="addComment">
-			<result name="AddComment" type="redirectAction">index</result>
+			<result name="AddComment" type="redirectAction">video</result>
 		</action>
 		
 		<action name="deleteComment" class="UserAction" method="deleteComment">
-			<result name="DeleteComment" type="redirectAction">index</result>
+			<result name="DeleteComment" type="redirectAction">video</result>
+			<!--  <result name="DeleteComment" type="redirectAction">index</result>-->
 		</action>
 		
 	</package>

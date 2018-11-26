@@ -63,7 +63,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		this.movienInfos = movienInfos;
 	}
 
-
+	
 	public String videoIndex() throws Exception {
 		
 		//查询视频 和视频作者
@@ -82,6 +82,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		
 		request.put("MoiveInfo", moiveInfo);
 		request.put("CommentsList", comments);
+		
 		return "VideoIndex";
 	}
 

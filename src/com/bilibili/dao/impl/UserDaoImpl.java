@@ -10,6 +10,7 @@ import org.hibernate.criterion.Example;
 
 import com.bilibili.dao.UserDao;
 import com.bilibili.entity.Comments;
+import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 
 public class UserDaoImpl implements UserDao {
@@ -47,6 +48,13 @@ public class UserDaoImpl implements UserDao {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(comment);
+	}
+	@Override
+	public Userinfo getUserInfoById(int id) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Userinfo userInfo=(Userinfo)session.get(Userinfo.class, id);
+		return userInfo;
 	}
 
 }

@@ -41,7 +41,8 @@
 				<value>com/bilibili/entity/Moiveinfos.hbm.xml</value>
 				<value>com/bilibili/entity/Users.hbm.xml</value>
 				<value>com/bilibili/entity/Comments.hbm.xml</value>
-				<value>com/bilibili/entity/Topics.hbm.xml</value></list>
+				<value>com/bilibili/entity/Topics.hbm.xml</value>
+				<value>com/bilibili/entity/Userinfo.hbm.xml</value></list>
 		</property></bean>
         <!-- newsinfoDao -->
         <bean id="moiveInfoDao" class="com.bilibili.dao.impl.MoivenInfoDaoImpl">

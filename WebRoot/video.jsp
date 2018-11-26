@@ -27,16 +27,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				
 			var seessionUser="<%=session.getAttribute("User")%>"; 
   
-			
-		 	if(content.value == ""){
-				alert("内容不能为空！！");
-				content.focus();
-				return false;
-			}
-			
 			if(seessionUser=="null"||seessionUser==""){
 				alert("请先登陆");
 				window.location.replace("Login.jsp") 
+				return false;
+			}
+		 	if(content.value == ""){
+				alert("内容不能为空！！");
+				content.focus();
 				return false;
 			}
 			return true;
@@ -48,6 +46,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
 
+		
+		<s:if test="#session.User != null">
+			欢迎
+			<a href="logout.jsp">退出</a>
+		</s:if>
+		<s:if test="#session.User == null">
+			<a href="Login.jsp">登陆</a>
+		</s:if>
 		
   		${MoiveInfo.moive}
   		${MoiveInfo.titile}
@@ -84,7 +90,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<s:if test="#session.User.id==#comments.users.id">
 							<a href="deleteComment?deleteComment.id=${requestScope.comments.id }">删除</a>
 					</s:if>
-				
 				</s:if>
   			</s:iterator>
   </body>

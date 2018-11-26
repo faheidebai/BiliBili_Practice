@@ -16,17 +16,11 @@
         <property name="password" type="java.lang.String">
             <column name="Password" />
         </property>
-        <set name="moiveinfoses" inverse="true">
+        <set name="userinfos" inverse="true">
             <key>
-                <column name="AuthorId" not-null="true" />
+                <column name="UserId" not-null="true" />
             </key>
-            <one-to-many class="com.bilibili.entity.Moiveinfos" />
-        </set>
-        <set name="commentses" inverse="true">
-            <key>
-                <column name="AuthorId" not-null="true" />
-            </key>
-            <one-to-many class="com.bilibili.entity.Comments" />
+            <one-to-many class="com.bilibili.entity.Userinfo" />
         </set>
     </class>
 </hibernate-mapping>

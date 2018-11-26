@@ -8,6 +8,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.bilibili.biz.UserBiz;
 import com.bilibili.entity.Comments;
+import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -39,7 +40,10 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 		// TODO Auto-generated method stub
 		List loginList = this.userBiz.Login(user);
 		if (loginList != null && loginList.size() > 0){
-			session.put("User", loginList.get(0));
+			Users loginUser=(Users)loginList.get(0);
+			//Userinfo loginUserInfo = (Userinfo)loginUser.getUserinfos();
+			Userinfo loginUserInfo = userBiz.getUserInfoById(loginUser.getId());
+			session.put("LoginUserInfo", loginUserInfo);
 			return "Index";
 		}
 		return "Login";

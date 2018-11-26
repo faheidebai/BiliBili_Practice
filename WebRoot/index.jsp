@@ -21,17 +21,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
   <body>
-	<s:if test="#session.User != null">
-		欢迎
+	<s:if test="#session.LoginUserInfo != null">
+		<a href="UserIndex.jsp">${session.LoginUserInfo.userName}</a>
+		<a href="logout.jsp">退出</a>
 	</s:if>
-	<s:if test="#session.User == null">
-		test
+	<s:if test="#session.LoginUserInfo == null">
+		<a href="Login.jsp">登陆</a>
 	</s:if>
 
-	<a href="logout.jsp">退出</a>
+	
   	<s:iterator id="topicList" value="#request.TopicList">
   		
   		<s:if test="#topicList.id%2==1">
