@@ -19,11 +19,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
     <title>无标题文档</title>
     
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="html/css/simple-line-icons.css">
-    <link href="html/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-    <link href="html/css/flexslider.css" rel="stylesheet" /> 
-    <link href="html/css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+    <link href="css/flexslider.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet" />
   </head>
 
 <body>
@@ -59,14 +59,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
 		
 		-->
-		<div class="navbar-wrapper">
+		<div class="navbar-wrapper" >
             <div class="container-fluid">
                 <nav class="navbar navbar-fixed-top">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                             <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
+                            <span class="icon-bar""></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             </button>
@@ -93,7 +93,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
         </div>
 		
-	</header>
+
 	<!-- end header -->
  
 </div> 

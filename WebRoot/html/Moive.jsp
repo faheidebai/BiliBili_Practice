@@ -1,24 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="simple-line-icons/css/simple-line-icons.css">
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-<link href="css/flexslider.css" rel="stylesheet" /> 
-<link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+ <s:action name="index" executeResult="false" namespace="/"></s:action>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
-</head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
+<html>
+  <head>
+    <base href="MoiveinfoAction">
+    
+    <title>My JSP 'index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+    <title>无标题文档</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+    <link href="css/flexslider.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
 <body>
 <div id="wrapper" class="home-page">
 
@@ -32,50 +39,69 @@
 			  <p>动画推荐</p>
 		  </div>
 	  </div>
-	<!--视频页的开始-->
+	<!--è§é¢é¡µçå¼å§-->
 	 <div class="row" >
       <div class="col-xs-6 col-sm-9">
-        	<div class="col-xs-6  col-sm-12" style="background-color: #dedef8;box-shadow: 
-         inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-				testwstdfgdfgdfgdaerrrrrrrrrrrrrrrrrrertttttttttttttttttttttttttttttttttttttt
-				erterterrettttttttt
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				
-		 </div>
-		  <div class="col-xs-6 col-sm-12" style="background-color: #dedef8;box-shadow: 
-         inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-				testwstdfgdfgdfgdaerrrrrrrrrrrrrrrrrrertttttttttttttttttttttttttttttttttttttt
-				erterterrettttttttt
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-				<p>terretttttttt</p>
-		 </div>
+      		
+                    <div class="col-xs-6  col-sm-12">
+                        
+             
+                        <div class="col-md-3  text-center">
+                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
+                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
+                        </div>
+                                
+                 </div>
+                  <div class="col-xs-6 col-sm-12">
+                             
+                                
+                        <div class="col-md-3  text-center">
+                            <img src="img/team2.jpg" style="height: 150px; width:auto;"></img>
+                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
+                        </div>
+                
+                 </div>
+                
 	
       	</div>
-          <div class="col-xs-6 col-sm-3" 
-             style="background-color: #dedef8;box-shadow: 
-             inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat.
-             </p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
-                eiusmod tempor incididunt ut. 
-             </p>
+          <div class="col-xs-6 col-sm-3" >
+           			<section class="features">
+                        <div class="container">
+                                
+                          
+                              <div class="features-item">
+                                <div class="features">
+                                  <div class="icon">
+                                   <i class="icon-map icons"></i>
+                                  </div>
+                                  <div class="features-content">
+                                    <h3>Premium Sliders Included</h3>
+                                    <p>Lorem ipsum dlore inventore.</p>
+                                  </div>
+                                </div>
+                                <div class="features">
+                                  <div class="icon">
+                                    <i class="icon-envelope-open icons"></i>
+                                  </div>
+                                  <div class="features-content">
+                                    <h3>100% Responsive Layout</h3>
+                                    <p>Lorem ipsum dolore inventore.</p>
+                                  </div>
+                                </div>
+                               
+                              </div>
+                          
+                        
+                        
+                        </div>
+                 </section>
           </div>
       
        </div>
     </div>
              
 
-	<!--视频页的介绍-->
+	<!--è§é¢é¡µçä»ç»-->
  
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>

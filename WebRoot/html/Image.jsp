@@ -24,7 +24,7 @@
 
 	<!-- end header -->
 	<!-- Slider -->
-   		 <img src="img/slides/1.jpg"  />
+   		
              
 
 	<!-- end slider -->

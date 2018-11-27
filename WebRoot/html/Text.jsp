@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Home</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="" />
-<meta name="author" content="" />
-<!-- css -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="simple-line-icons/css/simple-line-icons.css">
-<link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-<link href="css/flexslider.css" rel="stylesheet" /> 
-<link href="css/style.css" rel="stylesheet" />
- 
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+ <s:action name="index" executeResult="false" namespace="/"></s:action>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 
-</head>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
+<html>
+  <head>
+    <base href="MoiveinfoAction">
+    
+    <title>My JSP 'index.jsp' starting page</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+    <title>无标题文档</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
+    <link href="css/flexslider.css" rel="stylesheet" /> 
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
 <body>
 <div id="wrapper" class="home-page">
 	   <div class="container">
 	<!-- end header -->
 	<!-- Slider -->
    		 
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav"">
 			<li class="active"><a href="#">首页</a></li>
 			<li><a href="#">番剧</a></li>
             <li><a href="#">动画</a></li>
@@ -40,23 +47,8 @@
             <li><a href="#">娱乐</a></li>
             <li><a href="#">影视</a></li>
             <li><a href="#">放映厅</a></li>
-			<li><img src="img/slides/1.jpg"  style="width:50px; height:50px;" /></li>
-            
-            <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					Java
-					<b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li><a href="#">jmeter</a></li>
-					<li><a href="#">EJB</a></li>
-					<li><a href="#">Jasper Report</a></li>
-					<li class="divider"></li>
-					<li><a href="#">分离的链接</a></li>
-					<li class="divider"></li>
-					<li><a href="#">另一个分离的链接</a></li>
-				</ul>
-			</li>
+			<li><img src="img/daohang.gif"  style="width:50px; height:50px;" /></li>
+    
 		</ul>
 	</div>
 	<!-- end slider -->
