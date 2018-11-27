@@ -27,48 +27,58 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 
 <body>
-<%
 
 
-	List topicList=${#request.TopicList}
-	for (int i=1; i<topicList.size()/2; i++){
+<s:iterator id="topicList" value="#request.TopicList" status="st">
+  	
+	<s:if test="#st.index%2==1">
 	
-%>
-
-	
-
-
-
-	
-	  <div class="container">
-		   <div class="row" >
-			  <div class="col-xs-2 col-sm-9" >
-			  	<s:if test="#topicList.id%2==1">
-	  			 	<p>${topicList.topicName}</p>
-	  			</s:if>
-			  </div>
-			  <div class="col-xs-2 col-sm-3">
-				  <s:if test="#topicList.id%2==0">
-	  			 	<p>${topicList.topicName}</p>
-	  			</s:if>
-			  </div>
+  	<div class="container">
+	   <div class="row" >
+		  <div class="col-xs-2 col-sm-9" >
+		  	<s:if test="#topicList.id%2==1">
+  			 	<p>${topicList.topicName}</p>
+  			</s:if>
 		  </div>
-	 </div>
+		  <div class="col-xs-2 col-sm-3">
+			 
+  			 	<p>${topicList.topicName}推荐</p>
+  		
+		  </div>
+	  </div>
 	<!--è§é¢é¡µçå¼å§-->
 	 <div class="row" >
       <div class="col-xs-6 col-sm-9">
       		
                   <div class="col-xs-6  col-sm-12">
                         
-             
-                        <div class="col-md-3  text-center">
-                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
-                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
-                        </div>
-                         <div class="col-md-3  text-center">
-                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
-                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
-                        </div>
+             			
+             			
+             				<s:iterator id="moiveInfoList" value="top" status="st">
+						  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+						  			
+						  					<s:if test="#st.count<5">
+						  					
+						  					  	<div class="col-md-3  text-center">
+						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           
+						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                      	
+						                       </div>
+						                      
+											</s:if>
+						  					<!--  <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>-->
+						  				</s:if>
+						  			
+						  				
+						  			</s:iterator>
+             			
+             			
+             			
+             			
+             			
+                      
+                      
                          <div class="col-md-3  text-center">
                             <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
                             <h5>Generic API's</h5> <p>Lorem ipsum  </p>
@@ -117,9 +127,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              
 	
 	<!--è§é¢é¡µçä»ç»-->
-<%	
-}
-%>
+	</s:if>
+</s:iterator>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->
