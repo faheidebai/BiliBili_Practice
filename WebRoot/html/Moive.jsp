@@ -27,65 +27,80 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
 
 <body>
-<div id="wrapper" class="home-page">
+<%
 
 
-   	<div class="container">
-	   <div class="row" >
-		  <div class="col-xs-2 col-sm-9" >
-			 <p>动画</p>
+	List topicList=${#request.TopicList}
+	for (int i=1; i<topicList.size()/2; i++){
+	
+%>
+
+	
+
+
+
+	
+	  <div class="container">
+		   <div class="row" >
+			  <div class="col-xs-2 col-sm-9" >
+			  	<s:if test="#topicList.id%2==1">
+	  			 	<p>${topicList.topicName}</p>
+	  			</s:if>
+			  </div>
+			  <div class="col-xs-2 col-sm-3">
+				  <s:if test="#topicList.id%2==0">
+	  			 	<p>${topicList.topicName}</p>
+	  			</s:if>
+			  </div>
 		  </div>
-		  <div class="col-xs-2 col-sm-3">
-			  <p>动画推荐</p>
-		  </div>
-	  </div>
+	 </div>
 	<!--è§é¢é¡µçå¼å§-->
 	 <div class="row" >
       <div class="col-xs-6 col-sm-9">
       		
-                    <div class="col-xs-6  col-sm-12">
+                  <div class="col-xs-6  col-sm-12">
                         
              
                         <div class="col-md-3  text-center">
                             <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
                             <h5>Generic API's</h5> <p>Lorem ipsum  </p>
                         </div>
-                                
-                 </div>
-                  <div class="col-xs-6 col-sm-12">
-                             
-                                
-                        <div class="col-md-3  text-center">
-                            <img src="img/team2.jpg" style="height: 150px; width:auto;"></img>
+                         <div class="col-md-3  text-center">
+                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
                             <h5>Generic API's</h5> <p>Lorem ipsum  </p>
                         </div>
-                
+                         <div class="col-md-3  text-center">
+                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
+                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
+                        </div>
+                         <div class="col-md-3  text-center">
+                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
+                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
+                        </div>
+                                
                  </div>
+              
                 
 	
       	</div>
           <div class="col-xs-6 col-sm-3" >
-           			<section class="features">
+           			
                         <div class="container">
                                 
                           
                               <div class="features-item">
                                 <div class="features">
-                                  <div class="icon">
-                                   <i class="icon-map icons"></i>
-                                  </div>
+                                 
                                   <div class="features-content">
-                                    <h3>Premium Sliders Included</h3>
-                                    <p>Lorem ipsum dlore inventore.</p>
+                                    <h3>s Included</h3>
+                                    <p>inventore.</p>
                                   </div>
                                 </div>
                                 <div class="features">
-                                  <div class="icon">
-                                    <i class="icon-envelope-open icons"></i>
-                                  </div>
+                                
                                   <div class="features-content">
-                                    <h3>100% Responsive Layout</h3>
-                                    <p>Lorem ipsum dolore inventore.</p>
+                                    <h3>Layout</h3>
+                                    <p> inventore.</p>
                                   </div>
                                 </div>
                                
@@ -94,16 +109,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         
                         
                         </div>
-                 </section>
+             
           </div>
       
        </div>
     </div>
              
-
+	
 	<!--è§é¢é¡µçä»ç»-->
- 
-</div>
+<%	
+}
+%>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
     ================================================== -->

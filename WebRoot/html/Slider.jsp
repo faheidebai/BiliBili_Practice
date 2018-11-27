@@ -70,92 +70,79 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		<p class="bg-danger">_______</p>
       
       
-        <!-- Slider
-        <div id="main-slider" class="flexslider">
-            <ul class="slides">
-              <li>
-                <img src="img/slides1.jpg" alt="" style="height:200px;" />
-					 <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="flex-caption">
-                                    
-                                   	<p class="text-muted">哈哈哈哈哈哈</p>
-                                </div>
-                            </div>
-                        </div>
-       	 			</div>
-              </li>
-              <li>
-                <img src="img/slides1.jpg" alt="" style="height:200px;" />
-				 <div class="container">
-					<div class="row">
-						<div class="col-lg-3">
-                			
-                    		<div class="flex-caption">
-                                    
-                                   	<p class="text-muted">哈哈哈哈哈哈</p>
-                             </div>
-                               
-                		
-				 		</div>
-           	 		</div>
-       		 	</div>
-              </li>
-            </ul>
-        </div>
-		 -->
-	<!-- end slider -->
+    
+	
+
       
       </div>
 
       <div class="col-xs-6 col-sm-7" >
       			<div class="row" >
 	       		   <div class="col-xs-3  col-sm-12">
-	                        <div>
-	                        </div>
-	             
-	                       <div class="col-md-3  text-center">
-	                           <img src="img/slides1.jpg" style="height: 75px; width:auto;" ></img>
-	                           
-	                      		<p>Lorem ipsum  </p>
-	                      	
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/slides2.jpg" style="height: 75px; width:auto;" ></img>
-	                           <p>Lorem ipsum  </p>
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/slides3.jpg" style="height: 75px; width:auto;" ></img>
-	                         <p>Lorem ipsum  </p>
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/team3.jpg" style="height: 75px; width:auto;" ></img>
-	                          <p>Lorem ipsum  </p>
-	                       </div>        
+	                        
+	             			
+	             			
+	             			
+	             				<s:iterator value="#request.MoiveInfoList">
+			
+									<s:iterator id="moiveInfoList" value="top" status="st">
+						  				<s:if test="#moiveInfoList.topics.id==0">
+						  			
+						  					<s:if test="#st.count<5">
+						  					
+						  					  	<div class="col-md-3  text-center">
+						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           
+						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                      	
+						                       </div>
+						                      
+											</s:if>
+						  					<!--  <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>-->
+						  				</s:if>
+						  			
+						  				
+						  			</s:iterator>
+						    	</s:iterator>
+	             			
+	             			
+	             			
+	             			
+	                     
+	                            
 	              	</div>
               	</div>
               		<div class="row" >
 	       		   <div class="col-xs-3  col-sm-12">
-	                        <div>
-	                        </div>
+	                        
 	             
-	                       <div class="col-md-3  text-center">
-	                           <img src="img/slides1.jpg" style="height: 75px; width:auto;" ></img>
-	                      		 <p>Lorem ipsum  </p>
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/slides2.jpg" style="height: 75px; width:auto;" ></img>
-	                           <p>Lorem ipsum  </p>
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/slides3.jpg" style="height: 75px; width:auto;" ></img>
-	                         <p>Lorem ipsum  </p>
-	                       </div>
-	                        <div class="col-md-3  text-center">
-	                           <img src="img/team3.jpg" style="height: 75px; width:auto;" ></img>
-	                          <p>Lorem ipsum  </p>
-	                       </div>        
+	             			<s:iterator value="#request.MoiveInfoList">
+			
+									<s:iterator id="moiveInfoList" value="top" status="st">
+						  				<s:if test="#moiveInfoList.topics.id==0">
+						  			
+						  					<s:if test="#st.count>=5">
+						  					
+						  					  	<div class="col-md-3  text-center">
+						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           
+						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                      	
+						                       </div>
+						                      
+											</s:if>
+						  					<!--  <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>-->
+						  				</s:if>
+						  			
+						  				
+						  			</s:iterator>
+						    	</s:iterator>
+	             
+	             		
+	             			
+	                    
+	                       
+	                            
 	              	</div>
               	</div>
          </p>

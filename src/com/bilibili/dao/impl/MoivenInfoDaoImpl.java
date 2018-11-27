@@ -39,8 +39,8 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Moiveinfos.class);	
-		c.add(Restrictions.eq("id",id));
-		c.setMaxResults(5);
+		c.add(Restrictions.eq("topics.id",id));
+		
 		return c.list();
 	}
 

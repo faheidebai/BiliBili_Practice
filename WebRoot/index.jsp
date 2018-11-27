@@ -25,7 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  	<jsp:include page="html/Top.jsp" />
+
     <a href="index.jsp">主页</a>
   
 	<s:if test="#session.LoginUserInfo != null">
@@ -49,6 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<s:iterator id="moiveInfoList" value="top">
   				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+  				
   					<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
   					<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>
   				</s:if>
@@ -58,9 +59,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</s:iterator>
     	
     </s:iterator>
-
-
-  
+		
+	
+	</br>
+	
 
 
    

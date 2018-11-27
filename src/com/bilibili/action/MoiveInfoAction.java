@@ -51,6 +51,8 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		request.put("TopicList", topicList);
 		request.put("MoiveInfoList", moiveInfoList);
 		// TODO Auto-generated method stub
+		List MoiveInfoListTest = moiveInfoBiz.getMoiveInfoByTopicId(1);
+		request.put("test", MoiveInfoListTest);
 		return "index";
 	}
 	
