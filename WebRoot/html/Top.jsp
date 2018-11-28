@@ -35,28 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- start header -->
 	<!---->
     <!--<header>
-        <div class="navbar navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
-                </div>
-                <div class="navbar-collapse collapse ">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">主页</a></li> 
-						<li><a href="about.html">音频</a></li>
-						<li><a href="services.html">游戏中心</a></li>
-                        <li><a href="portfolio.html">直播</a></li>
-                        <li><a href="pricing.html">会员购</a></li>
-                        <li><a href="contact.html">下载APP</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    
 		
 		-->
 		<div class="navbar-wrapper" >
@@ -77,15 +56,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 	
                              <ul class="nav nav-pills">
-                                  <li><a href="#">主页</a></li>
+                                  <li><a href="/index.jsp">主页</a></li>
                                   <li><a href="#">音频</a></li>
                                   <li><a href="#">游戏中心</a></li>
                                   <li><a href="#">直播</a></li>
                                   <li><a href="#">会员购</a></li>
                                   <li><a href="#">下载App</a></li>
                                   
-                                  <li class="active pull-right"><a href="#">登陆</a></li>
+                                  <li class="active pull-right"><a href="#">投稿</a></li>
                                   <li class="pull-right"><a href="#">历史</a></li>
+                                  <li class=" pull-right"><img src="img/users/unlogin.jpg" style="height:40px; width:40px;" href="#"  class="img-circle"></img></li>
+                                  
+                                  
                             </ul>    
                         </div>
                     </div>

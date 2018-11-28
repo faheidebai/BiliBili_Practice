@@ -35,12 +35,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
   	<div class="container">
 	   <div class="row" >
-		  <div class="col-xs-2 col-sm-9" >
+		  <div class="col-sm-9" >
 		  	<s:if test="#topicList.id%2==1">
   			 	<p>${topicList.topicName}</p>
   			</s:if>
 		  </div>
-		  <div class="col-xs-2 col-sm-3">
+		  <div class="col-sm-3">
 			 
   			 	<p>${topicList.topicName}推荐</p>
   		
