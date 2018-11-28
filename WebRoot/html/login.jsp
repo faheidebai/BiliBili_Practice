@@ -37,7 +37,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<div id="wrapper" class="home-page">
   		<jsp:include page="Top.jsp" />
   	 	<header>
-  		 	   <img src="img/test.jpg" style="width:100%; height:150px;" />
+  		 	   <img src="img/background.png" style="width:100%; height:150px;" />
   		 </header>
   		
   		
@@ -46,21 +46,69 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<div class="row  text-center"> 
 				  <div class="col-md-6 ">
 				  
-				         我在左边
+				  	<div id="myCarousel" class="carousel slide">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>   
+						<!-- 轮播（Carousel）项目 -->
+						<div class="carousel-inner">
+							<div class="item active">
+							<img src="img/slides1.jpg" alt="First slide">
+							</div>
+							<div class="item">
+								<img src="img/slides2.jpg"" alt="Second slide">
+							</div>
+							<div class="item">
+								<img src="img/slides3.jpg" alt="Third slide">
+							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>    
+			  		<p class="bg-danger">_______</p>
+      
+				  			
+				  			
+			
+			
 				   </div>
 				   <div class="col-md-6">
-				   			
-				   			<!-- 登陆表单 -->
 				   		<form action="Login" method="post" onsubmit="return check()">
-						    <label>用户名</label>
-							<input type="text" id="loginName"  name="user.user" value="" class="login_input" /></br>
-							<label> 密&#160;&#160;码 </label>
-							<input type="password" id="loginPwd" name="user.password" value="" class="login_input" /></br>
-							<input type="submit" class="login_sub" value="登录" />
-							<label id="error"> </label>			
+				   		
+				   			
+				   			<div class="form-group ">
+				   				<ul class="nav nav-pills nav-stacked">
+				   					<li class="item username status-box " style="height:80px">
+				   						<input type="text" id="loginName" value placeholder="你的账号" name="user.user" value="" class="form-control" />
+				   					</li>
+				   					<li class="item password status-box" style="height:100px">
+				   						<input type="password" id="loginPwd"  value placeholder="密&#160;&#160;码 " name="user.password" value="" class="form-control" /></br>
+							
+				   					</li>
+				   					<li class="item gc clearfix " style="height:80px">
+				   							<input type="submit" class="btn btn-default pull-left" style="width:200px;" value="登录" />
+				   							 <button type="submit" class="btn btn-default pull-right" style="width:200px;">取消</button>
+				   					</li>
+				   					<li class="rememer">
+				   					
+				   					
+				   				</ul>
+				   			</div>
+				   			<!-- 登陆表单 -->
+				 
 						</form>
 							<!-- 登陆表单 -->
-				         我在右边
+				
       			</div>
 			</div>
 		</div>
