@@ -46,19 +46,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		
 		  </div>
 	  </div>
+	 </s:if>
 	<!--è§é¢é¡µçå¼å§-->
+	<s:if test="#st.index%2==1">
 	 <div class="row" >
+	 	
+	  <!-- ------------------------------------------------ -->
       <div class="col-xs-6 col-sm-9">
       		
                   <div class="col-xs-6  col-sm-12">
                         
-             			
-             			
+             		
+             			<s:iterator value="#request.MoiveInfoList">
              				<s:iterator id="moiveInfoList" value="top" status="st">
 						  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
 						  			
-						  					<s:if test="#st.count<5">
-						  					
+						  					<s:if test="#st.count<10"> 
+						  						
 						  					  	<div class="col-md-3  text-center">
 						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                           
@@ -74,60 +78,87 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  			</s:iterator>
              			
              			
-             			
+             			</s:iterator>
              			
              			
                       
                       
-                         <div class="col-md-3  text-center">
-                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
-                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
-                        </div>
-                         <div class="col-md-3  text-center">
-                            <img src="img/team2.jpg" style="height: 150px; width:auto;" ></img>
-                            <h5>Generic API's</h5> <p>Lorem ipsum  </p>
-                        </div>
+
                                 
                  </div>
               
                 
 	
       	</div>
+      	</s:if>
+      	<s:if test="#st.index%2==1">
+    	 <!-此处有bug  因为游戏 和游戏推荐是分开来的，如果你通过itractor辨识topicid来写，那么就会使界面变形-->	
+      <!-- ------------------------------------------------ -->
           <div class="col-xs-6 col-sm-3" >
-           			
-                        <div class="container">
-                                
-                          
+           			   <div class="features-item">
+                        	<s:iterator value="#request.MoiveInfoList">
+             				<s:iterator id="moiveInfoList" value="top" status="st">
+						  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+						  			
+						  					<s:if test="#st.count<10"> 
+						  						
+						  						    
+							                                <div class="features">
+							                                 
+							                                  <div class="features-content">
+							                              
+							                                    <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+							                                  </div>
+							                                </div>
+							                           
+							                             
+						  						
+						  	
+						                      
+											</s:if>
+						  					<!--  <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.image}</a>-->
+						  				</s:if>
+						  			
+						  				
+						  			</s:iterator>
+             			
+             			
+             			</s:iterator>
+             			</div>
+      	<!--  
                               <div class="features-item">
                                 <div class="features">
                                  
                                   <div class="features-content">
-                                    <h3>s Included</h3>
+                              
                                     <p>inventore.</p>
                                   </div>
                                 </div>
                                 <div class="features">
                                 
                                   <div class="features-content">
-                                    <h3>Layout</h3>
+                                
                                     <p> inventore.</p>
                                   </div>
                                 </div>
                                
                               </div>
-                          
-                        
-                        
-                        </div>
+                        -->         
              
           </div>
+          </s:if>
+           <!-- ------------------------------------------------ -->
+       
       
-       </div>
+       
+    </div>
+   
+      
     </div>
              
 	
 	<!--è§é¢é¡µçä»ç»-->
-	</s:if>
+	
 </s:iterator>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 <!-- javascript
