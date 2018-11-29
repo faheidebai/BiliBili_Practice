@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li><a href="#">娱乐</a></li>
             <li><a href="#">影视</a></li>
             <li><a href="#">放映厅</a></li>
-			<li><img src="img/daohang.gif"  style="width:50px; height:50px;" /></li>
+			<li><img src="html/img/daohang.gif"  style="width:50px; height:50px;" /></li>
     
 		</ul>
 	</div>

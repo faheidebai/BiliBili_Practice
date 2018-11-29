@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   
                                   <li class="active pull-right"><a href="#">投稿</a></li>
                                   <li class="pull-right"><a href="#">历史</a></li>
-                                  <li class=" pull-right"><img src="img/users/unlogin.jpg" style="height:40px; width:40px;" href="#"  class="img-circle"></img></li>
+                                  <li class=" pull-right"><img src="html/img/users/unlogin.jpg" style="height:40px; width:40px;" href="#"  class="img-circle"></img></li>
                                   
                                   
                             </ul>    

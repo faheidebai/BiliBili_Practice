@@ -64,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  					<s:if test="#st.count<10"> 
 						  						
 						  					  	<div class="col-md-3  text-center">
-						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                           
 						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
 						                      	
@@ -92,7 +92,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       	</div>
       	</s:if>
       	<s:if test="#st.index%2==1">
-    	 <!-此处有bug  因为游戏 和游戏推荐是分开来的，如果你通过itractor辨识topicid来写，那么就会使界面变形-->	
+    	 <!-- 此处有bug  因为游戏 和游戏推荐是分开来的，如果你通过itractor辨识topicid来写，那么就会使界面变形-->	
       <!-- ------------------------------------------------ -->
           <div class="col-xs-6 col-sm-3" >
            			   <div class="features-item">

@@ -50,13 +50,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<!-- 轮播（Carousel）项目 -->
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="img/slides1.jpg" alt="First slide">
+						<img src="html/img/slides1.jpg" alt="First slide">
 					</div>
 					<div class="item">
-						<img src="img/slides2.jpg"" alt="Second slide">
+						<img src="html/img/slides2.jpg"" alt="Second slide">
 					</div>
 					<div class="item">
-						<img src="img/slides3.jpg" alt="Third slide">
+						<img src="html/img/slides3.jpg" alt="Third slide">
 					</div>
 				</div>
 				<!-- 轮播（Carousel）导航 -->
@@ -93,7 +93,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  					<s:if test="#st.count<5">
 						  					
 						  					  	<div class="col-md-3  text-center">
-						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                           
 						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
 						                      	
@@ -126,7 +126,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  					<s:if test="#st.count>=5">
 						  					
 						  					  	<div class="col-md-3  text-center">
-						                           <img src="img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                           
 						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
 						                      	
