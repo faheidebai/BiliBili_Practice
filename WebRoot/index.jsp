@@ -42,7 +42,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  	<section id="content">
 	  		 <jsp:include page="html/Moive.jsp" />
 	  	</section>
-		
+	
+	
+	
+	
 	
   	</div>
   	  
@@ -56,5 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<script src="html/js/jquery.flexslider.js"></script>
 	<script src="html/js/animate.js"></script>
 	<script src="html/js/custom.js"></script> 
+	
+	
+
   </body>
 </html>

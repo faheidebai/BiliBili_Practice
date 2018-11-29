@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 	
                              <ul class="nav nav-pills">
-                                  <li><a href="/index.jsp">主页</a></li>
+                                  <li><a href="index.jsp">主页</a></li>
                                   <li><a href="#">音频</a></li>
                                   <li><a href="#">游戏中心</a></li>
                                   <li><a href="#">直播</a></li>
@@ -60,7 +60,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   
                                   <li class="active pull-right"><a href="#">投稿</a></li>
                                   <li class="pull-right"><a href="#">历史</a></li>
-                                  <li class=" pull-right"><img src="html/img/users/unlogin.jpg" style="height:40px; width:40px;" href="#"  class="img-circle"></img></li>
+                                  <li class=" pull-right">
+                                  	<s:if test="#session.LoginUserInfo == null">
+                                  		<a  href="Login.jsp" class="pull-top" ><img src="html/img/users/unlogin.jpg" style="height:35px; width:35px;"class="img-circle"></img>    </a>                              	
+                                  	</s:if>
+                                  	<s:else>
+                                  		<a  href="getMoiveByUser?getUserId.id=${session.LoginUserInfo.users.id}"  style="height:50px; width:50px;"><img src="html/img/team1.jpg" style="height:40px; width:40px;"  class="img-circle"></img></a>                         	
+                                  	</s:else>
+                                  </li>
                                   
                                   
                             </ul>    
