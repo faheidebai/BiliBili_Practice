@@ -1,24 +1,48 @@
-<!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
- <s:action name="index" executeResult="false" namespace="/"></s:action>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="MoiveinfoAction">
+    <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>My JSP 'Login.jsp' starting page</title>
+    
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
-    <title>无标题文档</title>
-    
+	<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+	<script language="javascript">
+		function check(){
+			var loginName = document.getElementById("loginName");
+			var loginPwd = document.getElementById("loginPwd");
+			if(loginName.value == ""){
+				alert("用户名不能为空！请重新填入！");
+				loginName.focus();	
+				return false;
+			}else if(loginPwd.value == ""){
+				alert("密码不能为空！请重新填入！");
+				loginPwd.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function focusOnLogin(){
+			var loginPwd = document.getElementById("loginPwd");
+			if( loginPwd != null )
+				loginPwd.focus();	
+		}
+	</script>
+
     <link href="html/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="html/css/simple-line-icons.css">
     <link href="html/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
@@ -26,12 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link href="html/css/style.css" rel="stylesheet" />
   </head>
 
-     <!--<link href="html/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="html/css/simple-line-icons.css">
-    <link href="html/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-    <link href="html/css/flexslider.css" rel="stylesheet" /> 
-    <link href="html/css/style.css" rel="stylesheet" />
-	-->
+
   <body>
 	
   	<div id="wrapper" class="home-page">

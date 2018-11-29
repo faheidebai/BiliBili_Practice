@@ -19,11 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
     <title>无标题文档</title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-    <link href="css/flexslider.css" rel="stylesheet" /> 
-    <link href="css/style.css" rel="stylesheet" />
   </head>
 
 <body>
@@ -156,23 +151,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
     </div>
              
-	
-	<!--è§é¢é¡µçä»ç»-->
+
 	
 </s:iterator>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script> 
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script> 
 </body>
 </html>

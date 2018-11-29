@@ -26,12 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link href="html/css/style.css" rel="stylesheet" />
   </head>
 
-     <!--<link href="html/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="html/css/simple-line-icons.css">
-    <link href="html/css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-    <link href="html/css/flexslider.css" rel="stylesheet" /> 
-    <link href="html/css/style.css" rel="stylesheet" />
-	-->
   <body>
   			
   	<div id="wrapper" class="home-page">
@@ -52,6 +46,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
   	</div>
   	  
- 
+	 <script src="html/js/jquery.js"></script>
+	<script src="html/js/jquery.easing.1.3.js"></script>
+	<script src="html/js/bootstrap.min.js"></script>
+	<script src="html/js/jquery.fancybox.pack.js"></script>
+	<script src="html/js/jquery.fancybox-media.js"></script> 
+	<script src="html/js/portfolio/jquery.quicksand.js"></script>
+	<script src="html/js/portfolio/setting.js"></script>
+	<script src="html/js/jquery.flexslider.js"></script>
+	<script src="html/js/animate.js"></script>
+	<script src="html/js/custom.js"></script> 
   </body>
 </html>

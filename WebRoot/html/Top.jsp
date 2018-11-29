@@ -1,12 +1,12 @@
-s<!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
- <s:action name="index" executeResult="false" namespace="/"></s:action>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="MoiveinfoAction">
@@ -19,11 +19,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="description" content="This is my page">
     <title>无标题文档</title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/simple-line-icons.css">
-    <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet"> 
-    <link href="css/flexslider.css" rel="stylesheet" /> 
-    <link href="css/style.css" rel="stylesheet" />
   </head>
 
 <body>
