@@ -1,6 +1,5 @@
 <!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
- <s:action name="index" executeResult="false" namespace="/"></s:action>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -59,8 +58,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    <div class="media-body">
 			      <h4 class="media-heading text-danger">发黑的白</h4>
 			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
-			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
-			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
 			    </div>
 			  </div>
 			  <hr>
@@ -75,18 +72,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 
 			  <div class="media">
 			    <div class="media-left  media-middle">
-			      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:60px">
+			      <img src="html/img/users/unlogin.jpg" class="media-object img-circle" style="width:60px">
 			    </div>
 			    <div class="media-body">
 			    		<!-- 评论提交 -->
-				    	 <s:form action="addComment" method="post" onsubmit="return check()">
+				    	 <s:form  class="form-horizontal" role="form" action="addComment" method="post" onsubmit="return check()">
 							<s:hidden name="addComment.users.id" value="%{#session.User.id}" />
 							<s:hidden name="addComment.moiveId" value="%{#request.MoiveInfo.id}" /> 
-						       <s:textarea label="内容" name="addComment.content" cols="100" rows="5" id="content">
-						        </s:textarea>
-						     <p>
-						         <s:submit value="提交" />  
-						      </p> 
+							
+							<div class="form-group">
+							
+								<div class="col-sm-10">
+							        <input type="text" class="form-control" name="addComment.content"  id="content" placeholder="内容">
+						       	</div>
+					        	 <div class="col-sm-2">
+					           		 <button type="submit" class="btn btn-default">登录</button> 
+					            </div>
+							</div>
+							
+							
+						   
 						    </s:form>
 					   	<!-- 评论提交 -->
 			    </div>
@@ -108,9 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    <div class="media-body">
 			      <h4 class="media-heading text-danger">发黑的白</h4>
 			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
-			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
-			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
-			    </div>
+			       </div>
 			  </div>
 			  <hr>
 			

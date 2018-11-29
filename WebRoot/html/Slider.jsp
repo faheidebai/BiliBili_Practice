@@ -1,6 +1,6 @@
 <!--<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
- <s:action name="index" executeResult="false" namespace="/"></s:action>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -158,15 +158,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!-- javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="js/jquery.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.fancybox-media.js"></script> 
-<script src="js/portfolio/jquery.quicksand.js"></script>
-<script src="js/portfolio/setting.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script src="js/animate.js"></script>
-<script src="js/custom.js"></script> 
+<script src="html/js/jquery.js"></script>
+<script src="html/js/jquery.easing.1.3.js"></script>
+<script src="html/js/bootstrap.min.js"></script>
+<script src="html/js/jquery.fancybox.pack.js"></script>
+<script src="html/js/jquery.fancybox-media.js"></script> 
+<script src="html/js/portfolio/jquery.quicksand.js"></script>
+<script src="html/js/portfolio/setting.js"></script>
+<script src="html/js/jquery.flexslider.js"></script>
+<script src="html/js/animate.js"></script>
+<script src="html/js/custom.js"></script> 
 </body>
 </html>
