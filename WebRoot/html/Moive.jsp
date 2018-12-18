@@ -54,14 +54,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
              		
              			<s:iterator value="#request.MoiveInfoList">
              				<s:iterator id="moiveInfoList" value="top" status="st">
-						  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+						  				<s:if test="#topicList.id==#moiveInfoList.topicId">
 						  			
 						  					<s:if test="#st.count<10"> 
 						  						
 						  					  	<div class="col-md-3  text-center">
 						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
-						                           
-						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                     
+  	
+													<div style="overflow: hidden;
+													  text-overflow:ellipsis;
+													  display: -webkit-box;
+													  -webkit-box-orient: vertical;
+													  -webkit-line-clamp: 2;
+													  width:180px;"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+												  	</div>
+						                      		
 						                      	
 						                       </div>
 						                      
@@ -93,17 +101,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            			   <div class="features-item">
                         	<s:iterator value="#request.MoiveInfoList">
              				<s:iterator id="moiveInfoList" value="top" status="st">
-						  				<s:if test="#topicList.id==#moiveInfoList.topics.id">
+						  				<s:if test="#topicList.id==#moiveInfoList.topicId">
 						  			
 						  					<s:if test="#st.count<10"> 
 						  						
 						  						    
 							                                <div class="features">
 							                                 
-							                                  <div class="features-content">
-							                              
-							                                    <a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
-							                                  </div>
+							                                  <div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; height:30px"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a></div>
+							                                  
 							                                </div>
 							                           
 							                             

@@ -63,7 +63,7 @@ public class UserDaoImpl implements UserDao {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Moiveinfos.class);	
-		c.add(Restrictions.eq("users.id",id));
+		c.add(Restrictions.eq("userinfo.id",id));
 		c.setMaxResults(5);
 		return c.list();
 	}

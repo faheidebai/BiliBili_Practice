@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	<jsp:include page="html/Top.jsp" />
   	<div id="wrapper" class="home-page">
      <div class="container">
-   <img src="html/img/slides/2.jpg" style="width:930px;" />
+   <img src="html/img/slides/2.jpg" style="width:1100px;" />
 				 <div class="container">
 					<div class="row">
 						<div class="col-lg-12">
@@ -140,16 +140,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													</p>
 												</div>
 												<div class="tab-pane" id="panel-2">
+												<br>
 													 <div class="container">
 													 		<p></p>
 													 		<p></p>
+													 		
 															 <div class="row">
 																  	<s:iterator id="moiveInfoList" value="#request.MoiveList" status="st">	
 																  		<s:if test="#st.count<5">
-																  		<div class="col-md-3  text-center">
-												                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 100px; width:auto;" ></img>
-												                           
-												                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+																  		<div class="col-md-3  ">
+												                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style=" width:200px;" ></img>
+						                     
+  				
+																			<div style="overflow: hidden;
+																			  text-overflow:ellipsis;
+																			  display: -webkit-box;
+																			  -webkit-box-orient: vertical;
+																			  -webkit-line-clamp: 2;
+																			  width:200px;"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+																		  	</div>
 												                      	
 												                       </div>
 												                       </s:if>

@@ -5,6 +5,7 @@ import java.util.List;
 import com.bilibili.biz.MoiveInfoBiz;
 import com.bilibili.dao.MoiveinfoDao;
 import com.bilibili.entity.Moiveinfos;
+import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 
 public class MoiveInfoBizImpl implements MoiveInfoBiz{
@@ -28,7 +29,7 @@ public class MoiveInfoBizImpl implements MoiveInfoBiz{
 	}
 
 	@Override
-	public Users getAuthorById(int id) {
+	public Userinfo getAuthorById(int id) {
 		// TODO Auto-generated method stub
 		return moiveInfoDao.getAuthorById(id);
 	}

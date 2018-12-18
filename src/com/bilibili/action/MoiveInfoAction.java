@@ -8,15 +8,21 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.bilibili.biz.MoiveInfoBiz;
+import com.bilibili.biz.UserBiz;
 import com.bilibili.entity.Comments;
 import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Topics;
+import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class MoiveInfoAction extends ActionSupport implements RequestAware, SessionAware{
 	
 	MoiveInfoBiz moiveInfoBiz;
+	UserBiz userBiz;
+	public void setUserBiz(UserBiz userBiz) {
+		this.userBiz = userBiz;
+	}
 
 
 	public void setMoiveInfoBiz(MoiveInfoBiz moiveInfoBiz) {
@@ -51,7 +57,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		request.put("TopicList", topicList);
 		request.put("MoiveInfoList", moiveInfoList);
 		// TODO Auto-generated method stub
-	
+
 	
 		return "index";
 	}
@@ -59,28 +65,26 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 	
 	
 	private Moiveinfos movienInfos;
-	
-
 	public void setMovienInfos(Moiveinfos movienInfos) {
 		this.movienInfos = movienInfos;
 	}
-
-	
 	public String videoIndex() throws Exception {
 		
 		//查询视频 和视频作者
-		Users author = this.moiveInfoBiz.getAuthorById(this.movienInfos.getId());
 		Moiveinfos moiveInfo = this.moiveInfoBiz.getMoiveInfoById(this.movienInfos.getId());
-		moiveInfo.setUsers(author);
+		moiveInfo.setUserinfo(this.moiveInfoBiz.getAuthorById(moiveInfo.getUserinfo().getId())); 
+		
 		//查询评论 和评论作者
 		List comments = this.moiveInfoBiz.getCommentById(this.movienInfos.getId());
+
 		for (int i=0; i<comments.size(); i++){
 			Comments comment = (Comments)comments.get(i);
-			Users authorComments = this.moiveInfoBiz.getAuthorById(comment.getUsers().getId());
-			comment.setUsers(authorComments);
+			comment.setUserinfo(this.moiveInfoBiz.getAuthorById(comment.getUserinfo().getId()));
 		}
+	
 		request.put("MoiveInfo", moiveInfo);
 		request.put("CommentsList", comments);
+	
 		
 		return "VideoIndex";
 	}

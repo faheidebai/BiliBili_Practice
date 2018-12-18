@@ -65,7 +65,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   		<a  href="Login.jsp" class="pull-top" ><img src="html/img/users/unlogin.jpg" style="height:35px; width:35px;"class="img-circle"></img>    </a>                              	
                                   	</s:if>
                                   	<s:else>
-                                  		<a  href="getMoiveByUser?getUserId.id=${session.LoginUserInfo.users.id}"  style="height:50px; width:50px;"><img src="html/img/team1.jpg" style="height:40px; width:40px;"  class="img-circle"></img></a>                         	
+                                  		<!--  -->
+                                  		<a  href="getMoiveByUser?getUserId.userId=${session.LoginUserInfo.userId}"  style="height:50px; width:50px;"><img src="html/img/team1.jpg" style="height:40px; width:40px;"  class="img-circle"></img></a>                         	
                                   	</s:else>
                                   </li>
                                   

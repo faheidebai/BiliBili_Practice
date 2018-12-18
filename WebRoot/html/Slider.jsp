@@ -18,7 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
     <title>无标题文档</title>
-   
+
   </head>
 
 <body>
@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       
     
 	
-
+			
       
       </div>
 
@@ -83,14 +83,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	             				<s:iterator value="#request.MoiveInfoList">
 			
 									<s:iterator id="moiveInfoList" value="top" status="st">
-						  				<s:if test="#moiveInfoList.topics.id==0">
+						  				<s:if test="#moiveInfoList.topicId==0">
 						  			
 						  					<s:if test="#st.count<5">
 						  					
 						  					  	<div class="col-md-3  text-center">
 						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
-						                           
-						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                           <div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:130px;"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a></div>
+						                      		
 						                      	
 						                       </div>
 						                      
@@ -116,14 +116,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	             			<s:iterator value="#request.MoiveInfoList">
 			
 									<s:iterator id="moiveInfoList" value="top" status="st">
-						  				<s:if test="#moiveInfoList.topics.id==0">
+						  				<s:if test="#moiveInfoList.topicId==0">
 						  			
 						  					<s:if test="#st.count>=5">
 						  					
 						  					  	<div class="col-md-3  text-center">
 						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                           
-						                      		<a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+						                      		<div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:130px; "><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a></div>
 						                      	
 						                       </div>
 						                      

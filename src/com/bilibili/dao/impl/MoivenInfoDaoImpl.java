@@ -11,6 +11,7 @@ import com.bilibili.dao.MoiveinfoDao;
 import com.bilibili.entity.Comments;
 import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Topics;
+import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
 
 import freemarker.core.Comment;
@@ -39,21 +40,20 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Moiveinfos.class);	
-		c.add(Restrictions.eq("topics.id",id));
+		c.add(Restrictions.eq("topicId",id));
 		
 		return c.list();
 	}
 
 	
 	@Override
-	public Users getAuthorById(int id) {
+	public Userinfo getAuthorById(int id) {
 		// TODO Auto-generated method stub
 		Session session=sessionFactory.getCurrentSession();
-		Users author=(Users)session.get(Users.class, id);
+		Userinfo author=(Userinfo)session.get(Userinfo.class, id);
 
 		return author;
 	}
-
 	
 	
 	@Override

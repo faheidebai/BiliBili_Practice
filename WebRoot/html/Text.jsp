@@ -25,21 +25,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!-- end header -->
 	<!-- Slider -->
    		 
-            <ul class="nav navbar-nav"">
-			<li class="active"><a href="#">首页</a></li>
-			<li><a href="#">番剧</a></li>
+        <ul class="nav nav-pills">
+			<li class="active"><a href="index.jsp">首页<span class="badge">42</span></a></li>
+			<li><a href="#">番剧<span class="badge">50</span></a></li>
             <li><a href="#">动画</a></li>
-            <li><a href="#">国创</a></li>
-            <li><a href="#">音乐</a></li>
+            <li><a href="#">国创<span class="badge">2000</span></a></li>
+            <li><a href="#">音乐<span class="badge">5</span></a></li>
             <li><a href="#">游戏</a></li>
-            <li><a href="#">科技</a></li>
+            <li><a href="#">科技<span class="badge">100</span></a></li>
             <li><a href="#">生活</a></li>
-            <li><a href="#">鬼畜</a></li>
-            <li><a href="#">时尚</a></li>
-            <li><a href="#">广告</a></li>
+            <li><a href="#">鬼畜<span class="badge">50</span></a></li>
+            <li><a href="#">时尚<span class="badge">90</span></a></li>
             <li><a href="#">娱乐</a></li>
             <li><a href="#">影视</a></li>
-            <li><a href="#">放映厅</a></li>
+            <li><a href="#">放映厅<span class="badge">20</span></a></li>
 			<li><img src="html/img/daohang.gif"  style="width:50px; height:50px;" /></li>
     
 		</ul>

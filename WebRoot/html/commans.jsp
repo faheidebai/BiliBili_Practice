@@ -59,24 +59,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<a href="Login.jsp">登陆</a>
 		</s:if>
 		
-  		${MoiveInfo.moive}
-  		${MoiveInfo.titile}
-  		${MoiveInfo.users.user}
+  	
+  	
+  		${MoiveInfo}
   	 -->
   		<!--  ${Author.user} -->
- 
-		
+				<div class="container">
+					  <div class="media">
+					 	${MoiveInfo.moive}
+					 		<br><br>
+					    <div class="media-body">
+					      <h3 class="media-heading">${MoiveInfo.titile}</h3>
+					      <p>35.1万播放 · 5970弹幕 · 2018-12-16 23:21:54影视影视杂谈</p>
+					       </div>
+					  </div>
+			  </div>
 			<!--作者-->
+			<br>
 			<div class="container">
-			  <h2>多媒体对象</h2>
-			  <p>多媒体对象可以设置头部、居中、底部对齐，对应的类分别是 "media-top"、 "media-middle" 、 "media-bottom":</p><br>
+				
+			
 			  <div class="media">
 			    <div class="media-left media-top">
-			      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:60px">
+			      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:50px">
 			    </div>
 			    <div class="media-body">
-			      <h4 class="media-heading text-danger">发黑的白</h4>
-			      <p>这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。这是一些示例文本。</p>
+			      <h4 class="media-heading text-danger">${MoiveInfo.userinfo.userName}</h4>
+			      
+			      <p>${MoiveInfo.userinfo.personality}</p>
 			    </div>
 			  </div>
 			  <hr>
@@ -84,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 			<!--作者-->
 			
-			<div class="container"><p></p><p></p><p></p> </div>
+		
 			<div class="container"> <h2 class="text-primary">全部评价</h2></div>
 		
 		
@@ -93,19 +103,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			 
 			  <div class="media">
 			    <div class="media-left  media-middle">
-			      <img src="html/img/users/unlogin.jpg" class="media-object img-circle" style="width:60px">
+			      <img src="html/img/users/unlogin.jpg" class="media-object img-circle" style="width:50px">
 			    </div>
 			    <div class="media-body">
 			    	
 			    		<!-- 评论提交 -->
 				    	 <s:form  class="form-horizontal" role="form" action="addComment" method="post" onsubmit="return check()">
-								<s:hidden name="addComment.users.id" value="%{#session.LoginUserInfo.id}" />
+								<s:hidden name="addComment.userinfo.id" value="%{#session.LoginUserInfo.id}" />
 								<s:hidden name="addComment.moiveId" value="%{#request.MoiveInfo.id}" /> 
 								
 						
 								
 									<div class="col-sm-11">
-								        <input type="text" class="form-control" style="width:780px; height:60px;" name="addComment.content"  id="content" placeholder="内容">
+								        <input type="text" class="form-control" style="width:830px; height:60px;" name="addComment.content"  id="content" placeholder="内容">
 							       	</div>
 						        	 <div class="col-sm-1">
 						           		 <button type="submit" class="btn btn-default" style="width:60px; height:60px;">评论</button> 
@@ -135,15 +145,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 
 				  <div class="media">
 				    <div class="media-left media-top">
-				      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:60px">
+				      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:50px">
 				    </div>
 				    <div class="media-body">
-				      <h4 class="media-heading text-danger">${comments.users.user}</h4>
+				      <h5 class="media-heading">${comments.userinfo.userName}</h5>
 				      	<p>${comments.content}
 				      	<s:if test="#session.LoginUserInfo">
 				      	
-								<s:if test="#session.LoginUserInfo.id==#comments.users.id">
-										<a href="deleteComment?deleteComment.id=${requestScope.comments.id }">删除</a>
+								<s:if test="#session.LoginUserInfo.userId==#comments.userinfo.id">
+										<a href="deleteComment?deleteComment.id=${requestScope.comments.id}">删除</a>
 									</s:if>
 						</s:if>
 						</p>

@@ -10,10 +10,10 @@
             <column name="id" />
             <generator class="native" />
         </id>
-        <many-to-one name="users" class="com.bilibili.entity.Users" fetch="select" lazy="false">
+        <many-to-one name="userinfo" class="com.bilibili.entity.Userinfo" fetch="select">
             <column name="AuthorId" not-null="true" />
         </many-to-one>
-        <property name="moiveId" type="java.lang.Integer" lazy="false">
+        <property name="moiveId" type="java.lang.Integer">
             <column name="MoiveId" not-null="true" />
         </property>
         <property name="content" type="java.lang.String">

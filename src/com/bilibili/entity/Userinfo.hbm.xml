@@ -10,9 +10,9 @@
             <column name="id" />
             <generator class="native" />
         </id>
-        <many-to-one name="users" class="com.bilibili.entity.Users" fetch="select">
+        <property name="userId" type="java.lang.Integer">
             <column name="UserId" not-null="true" />
-        </many-to-one>
+        </property>
         <property name="userName" type="java.lang.String">
             <column name="UserName" not-null="true" />
         </property>
@@ -22,5 +22,11 @@
         <property name="personality" type="java.lang.String">
             <column name="Personality" not-null="true" />
         </property>
+        <set name="commentses" inverse="true">
+            <key>
+                <column name="AuthorId" not-null="true" />
+            </key>
+            <one-to-many class="com.bilibili.entity.Comments" />
+        </set>
     </class>
 </hibernate-mapping>

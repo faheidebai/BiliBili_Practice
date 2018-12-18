@@ -81,13 +81,13 @@ public class UserAction   extends ActionSupport implements RequestAware, Session
 	}
 	
 	
-	private Users getUserId;
-	public void setGetUserId(Users getUserId) {
+	private Userinfo getUserId;
+	public void setGetUserId(Userinfo getUserId) {
 		this.getUserId = getUserId;
 	}
 	public String getMoiveByUser() throws Exception {
 		// TODO Auto-generated method stub
-		List moiveList = userBiz.getMoiveInfoByUserId(getUserId.getId());
+		List moiveList = userBiz.getMoiveInfoByUserId(getUserId.getUserId());
 		request.put("MoiveList", moiveList);
 		return "Moive";
 	}

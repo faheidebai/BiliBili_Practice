@@ -9,7 +9,7 @@ public class Comments implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private Users users;
+	private Userinfo userinfo;
 	private Integer moiveId;
 	private String content;
 
@@ -20,8 +20,8 @@ public class Comments implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Comments(Users users, Integer moiveId, String content) {
-		this.users = users;
+	public Comments(Userinfo userinfo, Integer moiveId, String content) {
+		this.userinfo = userinfo;
 		this.moiveId = moiveId;
 		this.content = content;
 	}
@@ -36,12 +36,12 @@ public class Comments implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Users getUsers() {
-		return this.users;
+	public Userinfo getUserinfo() {
+		return this.userinfo;
 	}
 
-	public void setUsers(Users users) {
-		this.users = users;
+	public void setUserinfo(Userinfo userinfo) {
+		this.userinfo = userinfo;
 	}
 
 	public Integer getMoiveId() {

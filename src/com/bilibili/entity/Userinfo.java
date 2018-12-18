@@ -1,5 +1,8 @@
 package com.bilibili.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Userinfo entity. @author MyEclipse Persistence Tools
  */
@@ -9,10 +12,11 @@ public class Userinfo implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private Users users;
+	private Integer userId;
 	private String userName;
 	private String avatar;
 	private String personality;
+	private Set commentses = new HashSet(0);
 
 	// Constructors
 
@@ -21,18 +25,19 @@ public class Userinfo implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Userinfo(Users users, String userName, String personality) {
-		this.users = users;
+	public Userinfo(Integer userId, String userName, String personality) {
+		this.userId = userId;
 		this.userName = userName;
 		this.personality = personality;
 	}
 
 	/** full constructor */
-	public Userinfo(Users users, String userName, String avatar, String personality) {
-		this.users = users;
+	public Userinfo(Integer userId, String userName, String avatar, String personality, Set commentses) {
+		this.userId = userId;
 		this.userName = userName;
 		this.avatar = avatar;
 		this.personality = personality;
+		this.commentses = commentses;
 	}
 
 	// Property accessors
@@ -45,12 +50,12 @@ public class Userinfo implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Users getUsers() {
-		return this.users;
+	public Integer getUserId() {
+		return this.userId;
 	}
 
-	public void setUsers(Users users) {
-		this.users = users;
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
 
 	public String getUserName() {
@@ -75,6 +80,14 @@ public class Userinfo implements java.io.Serializable {
 
 	public void setPersonality(String personality) {
 		this.personality = personality;
+	}
+
+	public Set getCommentses() {
+		return this.commentses;
+	}
+
+	public void setCommentses(Set commentses) {
+		this.commentses = commentses;
 	}
 
 }

@@ -9,8 +9,8 @@ public class Moiveinfos implements java.io.Serializable {
 	// Fields
 
 	private Integer id;
-	private Users users;
-	private Topics topics;
+	private Userinfo userinfo;
+	private Integer topicId;
 	private String image;
 	private String titile;
 	private String moive;
@@ -22,15 +22,15 @@ public class Moiveinfos implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Moiveinfos(Users users, Topics topics) {
-		this.users = users;
-		this.topics = topics;
+	public Moiveinfos(Userinfo userinfo, Integer topicId) {
+		this.userinfo = userinfo;
+		this.topicId = topicId;
 	}
 
 	/** full constructor */
-	public Moiveinfos(Users users, Topics topics, String image, String titile, String moive) {
-		this.users = users;
-		this.topics = topics;
+	public Moiveinfos(Userinfo userinfo, Integer topicId, String image, String titile, String moive) {
+		this.userinfo = userinfo;
+		this.topicId = topicId;
 		this.image = image;
 		this.titile = titile;
 		this.moive = moive;
@@ -46,20 +46,20 @@ public class Moiveinfos implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Users getUsers() {
-		return this.users;
+	public Userinfo getUserinfo() {
+		return this.userinfo;
 	}
 
-	public void setUsers(Users users) {
-		this.users = users;
+	public void setUserinfo(Userinfo userinfo) {
+		this.userinfo = userinfo;
 	}
 
-	public Topics getTopics() {
-		return this.topics;
+	public Integer getTopicId() {
+		return this.topicId;
 	}
 
-	public void setTopics(Topics topics) {
-		this.topics = topics;
+	public void setTopicId(Integer topicId) {
+		this.topicId = topicId;
 	}
 
 	public String getImage() {
