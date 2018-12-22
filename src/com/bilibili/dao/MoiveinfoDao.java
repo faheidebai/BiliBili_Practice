@@ -17,4 +17,16 @@ public interface MoiveinfoDao {
 	public Moiveinfos getMoiveInfoById(int id);
 		
 	public List getCommentById(int id);
+	
+
+	
+//获取新闻总数
+	public Integer getCountOfAllMoiveinfos();
+	//分页查询
+	public List getAllMoiveinfosByPage(int page,int pageSize);	
+	//根据条件查询新闻，分页
+	//获取该条件下新闻总数
+	public Integer getCountOfMoiveinfo(Moiveinfos condition);
+	//根据条件分页
+	public List getMoiveinfosByConditionAndPage(Moiveinfos condition,int page,int pageSize);
 }

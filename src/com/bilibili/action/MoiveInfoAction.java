@@ -14,6 +14,7 @@ import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Topics;
 import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
+import com.bilibili.entity.Pager;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class MoiveInfoAction extends ActionSupport implements RequestAware, SessionAware{
@@ -88,8 +89,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		
 		return "VideoIndex";
 	}
-
-
+	
 
 
 		

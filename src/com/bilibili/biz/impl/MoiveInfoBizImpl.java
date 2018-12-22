@@ -7,6 +7,7 @@ import com.bilibili.dao.MoiveinfoDao;
 import com.bilibili.entity.Moiveinfos;
 import com.bilibili.entity.Userinfo;
 import com.bilibili.entity.Users;
+import com.bilibili.entity.Pager;
 
 public class MoiveInfoBizImpl implements MoiveInfoBiz{
 	
@@ -45,6 +46,42 @@ public class MoiveInfoBizImpl implements MoiveInfoBiz{
 		// TODO Auto-generated method stub
 		return moiveInfoDao.getCommentById(id);
 	}
+
+	
+	
+
+	public List getAllMoiveinfosByPage(int page, int pageSize) {
+		// TODO Auto-generated method stub
+		return this.moiveInfoDao.getAllMoiveinfosByPage(page, pageSize);
+	}
+
+	@Override
+	public Pager getPagerOfAllMoiveinfos(int pageSize) {
+		// TODO Auto-generated method stub
+		int count=this.moiveInfoDao.getCountOfAllMoiveinfos();
+		Pager pager=new Pager();
+		pager.setPerPageRows(pageSize);//每页记录条数
+		pager.setRowCount(count);//总记录数
+		return pager;
+	}
+
+	@Override
+	public List getMoiveinfosConditionAndPage(Moiveinfos condition, int page, int pageSize) {
+		// TODO Auto-generated method stub
+		return this.moiveInfoDao.getMoiveinfosByConditionAndPage(condition, page, pageSize);
+	}
+
+	@Override
+	public Pager getPagerOfNewsinfo(Moiveinfos condition, int pageSize) {
+		// TODO Auto-generated method stub
+		int count=this.moiveInfoDao.getCountOfMoiveinfo(condition);
+		Pager pager=new Pager();
+		pager.setPerPageRows(pageSize);//每页记录条数
+		pager.setRowCount(count);//总记录数
+		return pager;
+	}
+
+
 
 
 

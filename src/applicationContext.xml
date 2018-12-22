@@ -67,6 +67,10 @@
 			<property name="userBiz" ref="UserBiz" />
 			<property name="moiveInfoBiz" ref="moiveInfoBiz" />
 		</bean>
+		<bean id="AdminAction" class="com.bilibili.action.AdminAction">
+			<property name="userBiz" ref="UserBiz" />
+			<property name="moiveInfoBiz" ref="moiveInfoBiz" />
+		</bean>
 		
 		
 	<!-- 事务管理器 -->	

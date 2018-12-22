@@ -5,6 +5,8 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
 import com.bilibili.dao.MoiveinfoDao;
@@ -78,5 +80,59 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 		return c.list();
 
 	}
+
+
+	public Integer getCountOfAllMoiveinfos() {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Criteria c=session.createCriteria(Moiveinfos.class);
+		return c.list().size();
+	}
+
+
+	public List getAllMoiveinfosByPage(int page, int pageSize) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Criteria c=session.createCriteria(Moiveinfos.class);
+		c.setFirstResult((page-1)*pageSize);
+		c.setMaxResults(pageSize);
+		return c.list();
+	}
+
+
+	public Integer  getCountOfMoiveinfo(Moiveinfos condition) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Criteria c=session.createCriteria(Moiveinfos.class);
+		if(condition!=null){
+			
+			if(condition.getTitile()!=null
+					&&!"".equals(condition.getTitile())){//标题模糊查询
+				c.add(Restrictions.like("titile", 
+						condition.getTitile(),MatchMode.ANYWHERE));
+			}
+		}
+		return c.list().size();
+	}
+
+	
+	public List getMoiveinfosByConditionAndPage(Moiveinfos condition, int page, int pageSize) {
+		// TODO Auto-generated method stub
+		Session session=sessionFactory.getCurrentSession();
+		Criteria c=session.createCriteria(Moiveinfos.class);
+		if(condition!=null){
+			
+			if(condition.getTitile()!=null
+					&&!"".equals(condition.getTitile())){//标题模糊查询
+				c.add(Restrictions.like("titile", 
+						condition.getTitile(),MatchMode.ANYWHERE));
+			}
+		}
+		c.setFirstResult((page-1)*pageSize);
+		c.setMaxResults(pageSize);
+	
+		return c.list();
+	}
+
 
 }

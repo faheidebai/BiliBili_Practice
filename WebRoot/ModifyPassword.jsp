@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+.<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
@@ -74,12 +74,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				   						<input type="text" id="loginName" value placeholder="你的账号" name="user.user" value="" class="form-control" />
 				   					</li>
 				   					<li class="item password status-box" style="height:100px">
-				   						<input type="password" id="loginPwd"  value placeholder="密&#160;&#160;码 " name="user.password" value="" class="form-control" /></br>
+				   						<input type="password" id="loginPwd"  value placeholder="密&#160;&#160;码 " value="" class="form-control" /></br>
+							
+				   					</li>
+				   					<li class="item password status-box" style="height:100px">
+				   						<input type="password" id="loginPwd"  value placeholder="确认密码 " name="user.password" value="" class="form-control" /></br>
 							
 				   					</li>
 				   					<li class="item gc clearfix " style="height:80px">
 				   							<input type="submit" class="btn btn-default pull-left" style="width:200px;" value="确认" />
-				   							 <button type="submit" class="btn btn-default pull-right" style="width:200px;">取消</button>
+				   							 <button type="submit" class="btn btn-default pull-left" style="width:200px;">取消</button>
 				   					</li>
 				   					<li class="rememer">
 				   					
