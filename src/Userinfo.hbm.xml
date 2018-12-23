@@ -10,9 +10,9 @@
             <column name="id" />
             <generator class="native" />
         </id>
-        <property name="userId" type="java.lang.Integer">
+        <many-to-one name="users" class="com.bilibili.entity.Users" fetch="select">
             <column name="UserId" not-null="true" />
-        </property>
+        </many-to-one>
         <property name="userName" type="java.lang.String">
             <column name="UserName" not-null="true" />
         </property>
@@ -22,11 +22,5 @@
         <property name="personality" type="java.lang.String">
             <column name="Personality" not-null="true" />
         </property>
-        <set name="moiveinfoses" inverse="true">
-            <key>
-                <column name="AuthorId" not-null="true" />
-            </key>
-            <one-to-many class="com.bilibili.entity.Moiveinfos" />
-        </set>
     </class>
 </hibernate-mapping>

@@ -29,4 +29,12 @@ public interface MoiveinfoDao {
 	public Integer getCountOfMoiveinfo(Moiveinfos condition);
 	//根据条件分页
 	public List getMoiveinfosByConditionAndPage(Moiveinfos condition,int page,int pageSize);
+	
+	public void deleteNews(int id);
+	
+	public void addMoiveinfos(Moiveinfos moiveinfo);
+	
+	public Moiveinfos toModify(Moiveinfos moiveinfo);
+	
+	public void doModify(Moiveinfos moiveinfo);
 }

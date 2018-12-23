@@ -81,6 +81,31 @@ public class MoiveInfoBizImpl implements MoiveInfoBiz{
 		return pager;
 	}
 
+	@Override
+	public void deleteNews(int id) {
+		// TODO Auto-generated method stub
+		this.moiveInfoDao.deleteNews(id);
+	}
+
+	@Override
+	public void addMoiveinfos(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		this.moiveInfoDao.addMoiveinfos(moiveinfo);
+	}
+
+	@Override
+	public Moiveinfos toModify(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		return this.moiveInfoDao.toModify(moiveinfo);
+	}
+
+	@Override
+	public void doModify(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		this.moiveInfoDao.doModify(moiveinfo);
+	}
+
+	
 
 
 

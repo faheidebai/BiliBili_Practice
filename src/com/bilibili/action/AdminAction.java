@@ -23,6 +23,7 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 
 	public void setMoiveInfoBiz(MoiveInfoBiz moiveInfoBiz) {
 		this.moiveInfoBiz = moiveInfoBiz;
+		
 	}
 	
 	Map<String, Object> session;
@@ -49,32 +50,66 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 	
 	public void setMovienInfos(Moiveinfos movienInfos) {
 		this.movienInfos = movienInfos;
+	
+		
 	}
+	
+	public Moiveinfos getMovienInfos() {
+		return movienInfos;
+	}
+
+
 	public String admin() throws Exception {
 		int curPage=1;//默认值，第一次查询
 		if(pager!=null){
 			curPage=pager.getCurPage();
 		}
-		List newsinfoList=null;//新闻
+		List movienInfoList=null;//新闻
 		if(this.moiveInfoBiz==null){
-			newsinfoList=this.moiveInfoBiz.getAllMoiveinfosByPage(curPage, 5);
+			movienInfoList=this.moiveInfoBiz.getAllMoiveinfosByPage(curPage, 5);
 			this.pager=this.moiveInfoBiz.getPagerOfAllMoiveinfos(5);
 		}else{
-			newsinfoList=this.moiveInfoBiz.getMoiveinfosConditionAndPage(
+			movienInfoList=this.moiveInfoBiz.getMoiveinfosConditionAndPage(
 					this.movienInfos, curPage, 5);
 			this.pager=this.moiveInfoBiz.getPagerOfNewsinfo(
 					this.movienInfos, 5);
 		}
 		this.pager.setCurPage(curPage);
-		this.request.put("newsinfoList", newsinfoList);
+		this.request.put("movienInfoList", movienInfoList);
 
 		
 		return "admin";
 	}
 	
 	public String deleteNews() throws Exception {
-	
+		this.moiveInfoBiz.deleteNews(this.movienInfos.getId());
 		return "admin";
 	}
+	
+	public String getTopicName() throws Exception {
+		List topicList=this.moiveInfoBiz.getAllTopic();
+		this.request.put("topicList", topicList);
+		return "add";
+	}
+	public String addMoiveInfos() throws Exception {
+		this.moiveInfoBiz.addMoiveinfos(movienInfos);
+		return "admin";
+		
+	}
+	
+	
+	public String toModify() throws Exception {
+		Moiveinfos toModifyInfo=this.moiveInfoBiz.toModify(movienInfos);
+		this.request.put("toModifyInfo", toModifyInfo);
+		
+		return "Modify";
+	}
+	
+	public String doModify()throws Exception {
+		this.moiveInfoBiz.addMoiveinfos(movienInfos);
+		
+		return "admin";
+	}
+	
 
 }

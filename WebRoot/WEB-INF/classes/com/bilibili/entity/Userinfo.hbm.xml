@@ -22,11 +22,11 @@
         <property name="personality" type="java.lang.String">
             <column name="Personality" not-null="true" />
         </property>
-        <set name="commentses" inverse="true">
+        <set name="moiveinfoses" inverse="true">
             <key>
                 <column name="AuthorId" not-null="true" />
             </key>
-            <one-to-many class="com.bilibili.entity.Comments" />
+            <one-to-many class="com.bilibili.entity.Moiveinfos" />
         </set>
     </class>
 </hibernate-mapping>

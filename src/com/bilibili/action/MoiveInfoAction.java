@@ -44,7 +44,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 	}
 
 
-	public String index() throws Exception {
+public String index() throws Exception {
 		
 		List topicList = moiveInfoBiz.getAllTopic();
 		
@@ -58,7 +58,7 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 		request.put("TopicList", topicList);
 		request.put("MoiveInfoList", moiveInfoList);
 		// TODO Auto-generated method stub
-
+	
 	
 		return "index";
 	}
@@ -66,31 +66,27 @@ public class MoiveInfoAction extends ActionSupport implements RequestAware, Sess
 	
 	
 	private Moiveinfos movienInfos;
+	
+
 	public void setMovienInfos(Moiveinfos movienInfos) {
 		this.movienInfos = movienInfos;
 	}
+
+	
 	public String videoIndex() throws Exception {
 		
 		//查询视频 和视频作者
+
 		Moiveinfos moiveInfo = this.moiveInfoBiz.getMoiveInfoById(this.movienInfos.getId());
-		moiveInfo.setUserinfo(this.moiveInfoBiz.getAuthorById(moiveInfo.getUserinfo().getId())); 
-		
+
 		//查询评论 和评论作者
 		List comments = this.moiveInfoBiz.getCommentById(this.movienInfos.getId());
-
-		for (int i=0; i<comments.size(); i++){
-			Comments comment = (Comments)comments.get(i);
-			comment.setUserinfo(this.moiveInfoBiz.getAuthorById(comment.getUserinfo().getId()));
-		}
 	
 		request.put("MoiveInfo", moiveInfo);
 		request.put("CommentsList", comments);
-	
 		
 		return "VideoIndex";
 	}
-	
-
 
 		
 		

@@ -10,12 +10,12 @@
             <column name="Id" />
             <generator class="native" />
         </id>
-        <many-to-one name="userinfo" class="com.bilibili.entity.Userinfo" fetch="select" lazy="false">
+        <many-to-one name="users" class="com.bilibili.entity.Users" fetch="select">
             <column name="AuthorId" not-null="true" />
         </many-to-one>
-        <property name="topicId" type="java.lang.Integer">
+        <many-to-one name="topics" class="com.bilibili.entity.Topics" fetch="select">
             <column name="TopicId" not-null="true" />
-        </property>
+        </many-to-one>
         <property name="image" type="java.lang.String">
             <column name="Image" length="1024" />
         </property>

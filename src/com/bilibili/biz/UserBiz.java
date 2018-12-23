@@ -17,6 +17,8 @@ public interface UserBiz {
 	public Userinfo getUserInfoById(int id);
 	
 	public List getMoiveInfoByUserId(int id);
+	
+	
 }
 
 

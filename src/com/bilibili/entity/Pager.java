@@ -5,6 +5,7 @@ public class Pager {
 	private int rowCount;//记录总数
 	private int perPageRows;//每页记录数
 	private int pageCount;//总页数
+	
 	public int getCurPage() {
 		return curPage;
 	}

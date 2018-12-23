@@ -26,8 +26,26 @@
 			<!--  <result name="DeleteComment" type="redirectAction">index</result>-->
 		</action>
 		
+		
 		<action name="admin" class="AdminAction" method="admin">
 			<result name="admin">/admin.jsp</result>
+		</action>
+		<action name="deleteNews" class="AdminAction" method="deleteNews">
+			<result name="admin" type="redirectAction">admin</result>
+		</action>
+		
+		<action name="getTopicName" class="AdminAction" method="getTopicName">
+			<result name="add" >add.jsp</result>
+		</action>
+		
+		<action name="addMoiveInfos" class="AdminAction" method="addMoiveInfos">
+			<result name="admin" type="redirectAction">admin</result>
+		</action>
+		<action name="toModify" class="AdminAction" method="toModify">
+			<result name="Modify" >/modify.jsp</result>
+		</action>
+		<action name="doModify" class="AdminAction" method="doModify">
+			<result name="admin" type="redirectAction">admin</result>
 		</action>
 	</package>
 

@@ -133,6 +133,38 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 	
 		return c.list();
 	}
+	public void deleteNews(int id) {
+		// TODO Auto-generated method stub
+		Session session=this.sessionFactory.getCurrentSession();
+		Moiveinfos moiveinfos=(Moiveinfos)session.get(Moiveinfos.class, id);
+		session.delete(moiveinfos);
+		
+	}
 
+
+	@Override
+	public void addMoiveinfos(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		Session session=this.sessionFactory.getCurrentSession();
+		session.save(moiveinfo);
+	}
+
+
+	@Override
+	public Moiveinfos toModify(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		Session session=this.sessionFactory.getCurrentSession();
+		Moiveinfos moiveinfos=(Moiveinfos)session.get(Moiveinfos.class, moiveinfo.getId());
+		return moiveinfos;
+	}
+
+
+	@Override
+	public void doModify(Moiveinfos moiveinfo) {
+		// TODO Auto-generated method stub
+		Session session=this.sessionFactory.getCurrentSession();
+		session.update(moiveinfo);
+		
+	}
 
 }

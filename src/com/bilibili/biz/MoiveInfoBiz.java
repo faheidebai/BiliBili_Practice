@@ -30,8 +30,12 @@ public interface MoiveInfoBiz {
 	//获取条件Pager属性
 	public Pager getPagerOfNewsinfo(Moiveinfos condition,int pageSize);
 	
+	public void deleteNews(int id);
 	
+	public void addMoiveinfos(Moiveinfos moiveinfo);
 	
+	public Moiveinfos toModify(Moiveinfos moiveinfo);
 	
+	public void doModify(Moiveinfos moiveinfo);
 	
 }

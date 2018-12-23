@@ -16,7 +16,7 @@ public class Userinfo implements java.io.Serializable {
 	private String userName;
 	private String avatar;
 	private String personality;
-	private Set commentses = new HashSet(0);
+	private Set moiveinfoses = new HashSet(0);
 
 	// Constructors
 
@@ -32,12 +32,12 @@ public class Userinfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Userinfo(Integer userId, String userName, String avatar, String personality, Set commentses) {
+	public Userinfo(Integer userId, String userName, String avatar, String personality, Set moiveinfoses) {
 		this.userId = userId;
 		this.userName = userName;
 		this.avatar = avatar;
 		this.personality = personality;
-		this.commentses = commentses;
+		this.moiveinfoses = moiveinfoses;
 	}
 
 	// Property accessors
@@ -82,12 +82,12 @@ public class Userinfo implements java.io.Serializable {
 		this.personality = personality;
 	}
 
-	public Set getCommentses() {
-		return this.commentses;
+	public Set getMoiveinfoses() {
+		return this.moiveinfoses;
 	}
 
-	public void setCommentses(Set commentses) {
-		this.commentses = commentses;
+	public void setMoiveinfoses(Set moiveinfoses) {
+		this.moiveinfoses = moiveinfoses;
 	}
 
 }

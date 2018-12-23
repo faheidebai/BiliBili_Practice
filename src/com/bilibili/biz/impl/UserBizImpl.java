@@ -46,4 +46,6 @@ public class UserBizImpl implements UserBiz{
 		return this.userDao.getMoiveInfoByUserId(id);
 	}
 
+
+
 }

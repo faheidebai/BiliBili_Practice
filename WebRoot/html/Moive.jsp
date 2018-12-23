@@ -57,7 +57,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  				<s:if test="#topicList.id==#moiveInfoList.topicId">
 						  			
 						  					<s:if test="#st.count<10"> 
-						  						
+						  				
 						  					  	<div class="col-md-3  text-center">
 						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
 						                     
