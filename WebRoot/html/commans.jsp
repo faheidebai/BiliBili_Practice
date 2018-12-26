@@ -109,7 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    	
 			    		<!-- 评论提交 -->
 				    	 <s:form  class="form-horizontal" role="form" action="addComment" method="post" onsubmit="return check()">
-								<s:hidden name="addComment.userinfo.id" value="%{#session.LoginUserInfo.id}" />
+								<s:hidden name="addComment.user.id" value="%{#session.LoginUserInfo.id}" />
 								<s:hidden name="addComment.moiveId" value="%{#request.MoiveInfo.id}" /> 
 								
 						

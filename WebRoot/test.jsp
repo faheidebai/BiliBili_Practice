@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   test
     
 		<form action="addMoiveInfos"  method="post">
-			<input  type="text" name="movienInfos.topics" value="1"/>
+			<input  type="text" name="movienInfos.topicId" value="1"/>
 			
 			
 			<input type="text" name="movienInfos.userinfo.id" value="2"/>

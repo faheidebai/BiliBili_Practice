@@ -38,8 +38,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		 <br/><br/>
 	  <div class="container">
 		<form class="form-horizontal" role="form" action="addMoiveInfos" method="post" onsubmit="return check()">
-		<hidden name="movienInfos.userinfo.id" value="1" />
- 		<hidden name="movienInfos.topicId" value="1" />
+		
+ 		<!--  <hidden name="movienInfos.topicId" value="1" />
+ 		<input type="text" name="movienInfos.userinfo.id" value="2"/>-->
+ 		<hidden   name="movienInfos.userinfo.id" value="1" />
  		
  		 <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">主题</label>

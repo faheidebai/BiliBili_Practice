@@ -43,7 +43,7 @@ public class MoivenInfoDaoImpl implements MoiveinfoDao {
 		Session session=sessionFactory.getCurrentSession();
 		Criteria c = session.createCriteria(Moiveinfos.class);	
 		c.add(Restrictions.eq("topicId",id));
-		
+		c.setMaxResults(8);
 		return c.list();
 	}
 

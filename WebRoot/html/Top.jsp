@@ -58,7 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   <li><a href="#">会员购</a></li>
                                   <li><a href="#">下载App</a></li>
                                   
-                                  <li class="active pull-right"><a href="#">投稿</a></li>
+                                  <li class="active pull-right"><a href="add.jsp">投稿</a></li>
                                   <li class="pull-right"><a href="#">历史</a></li>
                                   <li class=" pull-right">
                                   	<s:if test="#session.LoginUserInfo == null">

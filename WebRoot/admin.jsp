@@ -36,9 +36,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   		 </header>
   		 <br/><br/>
 <div class="container">
+	
 	<div class="row">
-	<br><br>
-	<>
+
+	<br>
+	<br>
+	
   <table class="table table-striped"> 
  			 <tr>
 				<th>标题</th>
@@ -49,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</tr>
     <s:iterator id="movienInfo" value="#request.movienInfoList">
     	 	<tr>
-				<th>${movienInfo.titile}</th>
+				<th>${movienInfo.id}${movienInfo.titile}</th>
 				<th>作者:${movienInfo.userinfo.userName}</th>
 				<th><a href='toModify?movienInfos.id=${movienInfo.id}' onclick='return clickdel()'>修改</a></th>
 				<th><a href='deleteNews?movienInfos.id=${movienInfo.id}' onclick='return clickdel()'>删除</a></th>
@@ -77,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	 </s:if> 
 			<a href="admin?pager.curPage=1">首页</a>
 			<a href="admin?pager.curPage=${pager.curPage-1}">上一页</a>
-			<a href="admin?pager.curPage=${pager.curPage+1}&movienInfos.topicId=${requestScope.movienInfos.topicId}&movienInfos.titile=${requestScope.movienInfos.titile}">下一页</a>
+			<a href="admin?pager.curPage=${pager.curPage+1}">下一页</a>
 			
 	<s:if test="pager.curPage<pager.pageCount">
 			

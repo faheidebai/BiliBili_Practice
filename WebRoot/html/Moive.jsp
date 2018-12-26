@@ -59,7 +59,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						  					<s:if test="#st.count<10"> 
 						  				
 						  					  	<div class="col-md-3  text-center">
-						                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style="height: 75px; width:auto;" ></img>
+						  					
+						                           <img src="${moiveInfoList.image}"   href="video?movienInfos.id=${moiveInfoList.id}" style="height:85px; width:170px;"  ></img>
 						                     
   	
 													<div style="overflow: hidden;
@@ -67,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													  display: -webkit-box;
 													  -webkit-box-orient: vertical;
 													  -webkit-line-clamp: 2;
-													  width:180px;"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
+													  width:170px; height:40px;"><a href="video?movienInfos.id=${moiveInfoList.id}">${moiveInfoList.titile}</a>
 												  	</div>
 						                      		
 						                      	

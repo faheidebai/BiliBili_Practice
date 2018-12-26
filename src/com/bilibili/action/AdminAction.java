@@ -106,7 +106,7 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 	}
 	
 	public String doModify()throws Exception {
-		this.moiveInfoBiz.addMoiveinfos(movienInfos);
+		this.moiveInfoBiz.doModify(movienInfos);
 		
 		return "admin";
 	}

@@ -40,8 +40,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  <div class="container">
 		<form class="form-horizontal" role="form" action="doModify" method="post" onsubmit="return check()">
 		<!-- value="%{#movienInfos.userinfo.userId}" -->
-		<s:hidden name="movienInfos.userinfo.userId"  value="1"/>
- 		${toModifyInfo.userinfo.userId}
+
+ 		<hidden   name="movienInfos.userinfo.id" value="${toModifyInfo.userinfo.userId}" />
  		${toModifyInfo.userinfo.userName}
  		 <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">主题</label>
@@ -52,7 +52,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">标题</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="firstname"  name="movienInfos.titile" value="${toModifyInfo.titile}"/>
+			
+				<input type="text" class="form-control" id="firstname"  name="movienInfos.titile" value="${toModifyInfo.titile}" />
 					  
 			</div>
 		</div>
@@ -60,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="form-group">
 			<label for="lastname" class="col-sm-2 control-label">地址</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="lastname"  name="movienInfos.moive" value=""			  >
+				<input type="text" class="form-control" id="lastname"  name="movienInfos.moive" />		 
 			</div>
 		</div>
 		<div class="form-group">
