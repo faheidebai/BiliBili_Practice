@@ -109,7 +109,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			    	
 			    		<!-- 评论提交 -->
 				    	 <s:form  class="form-horizontal" role="form" action="addComment" method="post" onsubmit="return check()">
-								<s:hidden name="addComment.user.id" value="%{#session.LoginUserInfo.id}" />
+								<s:hidden name="addComment.users.id" value="%{#session.LoginUserInfo.id}" />
 								<s:hidden name="addComment.moiveId" value="%{#request.MoiveInfo.id}" /> 
 								
 						
@@ -148,7 +148,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:50px">
 				    </div>
 				    <div class="media-body">
-				      <h5 class="media-heading">${comments.userinfo.userName}</h5>
+				      <h5 class="media-heading">问题内</h5>
 				      	<p>${comments.content}
 				      	<s:if test="#session.LoginUserInfo">
 				      	

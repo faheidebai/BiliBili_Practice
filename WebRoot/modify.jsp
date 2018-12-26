@@ -40,8 +40,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  <div class="container">
 		<form class="form-horizontal" role="form" action="doModify" method="post" onsubmit="return check()">
 		<!-- value="%{#movienInfos.userinfo.userId}" -->
-
- 		<hidden   name="movienInfos.userinfo.id" value="${toModifyInfo.userinfo.userId}" />
+		<hidden   name="movienInfos.userinfo.id" value="1" />
+ 		${toModifyInfo.userinfo.userId}
  		${toModifyInfo.userinfo.userName}
  		 <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">主题</label>

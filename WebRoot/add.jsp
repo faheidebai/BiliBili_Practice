@@ -41,8 +41,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		
  		<!--  <hidden name="movienInfos.topicId" value="1" />
  		<input type="text" name="movienInfos.userinfo.id" value="2"/>-->
- 		<hidden   name="movienInfos.userinfo.id" value="1" />
- 		
+ 	
+ 			 <div class="form-group">
+		
+			<div class="col-sm-10">
+				<s:hidden type="text" name="movienInfos.userinfo.id" value="2"/>
+			</div>
+		</div>
  		 <div class="form-group">
 			<label for="firstname" class="col-sm-2 control-label">主题</label>
 			<div class="col-sm-10">

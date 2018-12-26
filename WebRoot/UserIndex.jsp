@@ -149,7 +149,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 																  	<s:iterator id="moiveInfoList" value="#request.MoiveList" status="st">	
 																  		<s:if test="#st.count<5">
 																  		<div class="col-md-3  ">
-												                           <img src="html/img/slides2.jpg"   href="video?movienInfos.id=${moiveInfoList.id}" style=" width:200px;" ></img>
+												                           <img src="${moiveInfoList.image}"   href="video?movienInfos.id=${moiveInfoList.id}" style=" width:200px;" ></img>
 						                     
   				
 																			<div style="overflow: hidden;
@@ -169,6 +169,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 																  	</s:iterator>	
 																 </div>	
 				  											</div>
+												
+												</div>
+												<div class="tab-pane" id="panel-3">
+												<br>
+													 <div class="container">
+													 		<p></p>
+													 		<p></p>
+													 		
+															 <div class="row">
+																<a href="admin">视频修改</a>	
+															</div>
+				  									 </div>
 												
 												</div>
 										
