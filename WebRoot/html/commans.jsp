@@ -148,11 +148,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				      <img src="http://static.runoob.com/images/mix/img_avatar.png" class="media-object img-circle" style="width:50px">
 				    </div>
 				    <div class="media-body">
-				      <h5 class="media-heading">问题内</h5>
+				      <h5 class="media-heading">发黑的白</h5>
 				      	<p>${comments.content}
+				
 				      	<s:if test="#session.LoginUserInfo">
-				      	
-								<s:if test="#session.LoginUserInfo.userId==#comments.userinfo.id">
+				      			
+								<s:if test="#session.LoginUserInfo.userId==#comments.users.id">
 										<a href="deleteComment?deleteComment.id=${requestScope.comments.id}">删除</a>
 									</s:if>
 						</s:if>

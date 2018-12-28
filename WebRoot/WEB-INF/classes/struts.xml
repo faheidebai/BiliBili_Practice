@@ -39,7 +39,8 @@
 		</action>
 		
 		<action name="addMoiveInfos" class="AdminAction" method="addMoiveInfos">
-			<result name="admin" type="redirectAction">admin</result>
+			<result name="admin" type="redirectAction">index</result>
+			
 		</action>
 		<action name="toModify" class="AdminAction" method="toModify">
 			<result name="Modify" >/modify.jsp</result>

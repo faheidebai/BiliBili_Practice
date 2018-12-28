@@ -60,11 +60,12 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 
 
 	public String admin() throws Exception {
+		movienInfos=null;
 		int curPage=1;//默认值，第一次查询
 		if(pager!=null){
 			curPage=pager.getCurPage();
 		}
-		List movienInfoList=null;//新闻
+		List movienInfoList=null;
 		if(this.moiveInfoBiz==null){
 			movienInfoList=this.moiveInfoBiz.getAllMoiveinfosByPage(curPage, 5);
 			this.pager=this.moiveInfoBiz.getPagerOfAllMoiveinfos(5);
@@ -92,6 +93,7 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 		return "add";
 	}
 	public String addMoiveInfos() throws Exception {
+		request.clear();
 		this.moiveInfoBiz.addMoiveinfos(movienInfos);
 		return "admin";
 		
@@ -106,6 +108,7 @@ public class AdminAction  extends ActionSupport implements RequestAware, Session
 	}
 	
 	public String doModify()throws Exception {
+		request.clear();
 		this.moiveInfoBiz.doModify(movienInfos);
 		
 		return "admin";

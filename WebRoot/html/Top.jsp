@@ -59,18 +59,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                   <li><a href="#">下载App</a></li>
                                   
                                   <li class="active pull-right"><a href="add.jsp">投稿</a></li>
+                                 	<s:if test="#session.LoginUserInfo != null">
+                                  		  <li  class="pull-right"><a href="logout.jsp">退出登陆</a>   </li>
+                	
+                                  	</s:if>
                                   <li class="pull-right"><a href="#">历史</a></li>
+                                 
+                                  
                                   <li class=" pull-right">
                                   	<s:if test="#session.LoginUserInfo == null">
                                   		<a  href="Login.jsp" class="pull-top" ><img src="html/img/users/unlogin.jpg" style="height:35px; width:35px;"class="img-circle"></img>    </a>                              	
                                   	</s:if>
                                   	<s:else>
                                   		<!--  -->
-                                  		<a  href="getMoiveByUser?getUserId.userId=${session.LoginUserInfo.userId}"  style="height:50px; width:50px;"><img src="html/img/team1.jpg" style="height:40px; width:40px;"  class="img-circle"></img></a>                         	
+                                  		<a  href="getMoiveByUser?getUserId.userId=${session.LoginUserInfo.userId}"  style="height:50px; width:50px;"><img src="html/img/team1.jpg" style="height:40px; width:40px;"  class="img-circle"></img></a>      
+                                  		                 	
                                   	</s:else>
                                   </li>
+                                    
                                   
-                                  
+                         
+                                 
                             </ul>    
                         </div>
                     </div>

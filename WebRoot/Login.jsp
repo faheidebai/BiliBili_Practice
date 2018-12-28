@@ -117,11 +117,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				   					<li class="item gc clearfix " style="height:80px">
 				   							<input type="submit" class="btn btn-default pull-left" style="width:200px;" value="登录" />
 				   							 <button type="submit" class="btn btn-default pull-right" style="width:200px;">取消</button>
+				   							 
 				   					</li>
+				   				
+				   					
 				   					<li class="rememer">
 				   					
 				   					
 				   				</ul>
+				   				<a href="ModifyPassword.jsp">注册</a>
 				   			</div>
 				   			<!-- 登陆表单 -->
 				 

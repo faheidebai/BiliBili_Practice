@@ -53,6 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	 	<tr>
 				<th>${movienInfo.id}${movienInfo.titile}</th>
 				<th>作者:${movienInfo.userinfo.userName}</th>
+				
 				<th><a href='toModify?movienInfos.id=${movienInfo.id}' onclick='return clickdel()'>修改</a></th>
 				<th><a href='deleteNews?movienInfos.id=${movienInfo.id}' onclick='return clickdel()'>删除</a></th>
 			</tr>

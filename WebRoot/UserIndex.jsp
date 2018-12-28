@@ -178,7 +178,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 													 		<p></p>
 													 		
 															 <div class="row">
-																<a href="admin">视频修改</a>	
+															  1
+																<a href="admin?pager.curPage=1">视频修改</a>	
 															</div>
 				  									 </div>
 												
